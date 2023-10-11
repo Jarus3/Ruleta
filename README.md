@@ -1,0 +1,2 @@
+# Ruleta
+arquiectura de software

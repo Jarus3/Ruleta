@@ -6,8 +6,16 @@ package ruleta;
 
 /**
  *
- * @author 
+ * @author Jarus
  */
 public class Mesa {
-    
+    private Numero[] numeros;
+    private Ruleta ruleta;
+    public Mesa(){
+        ruleta=new Ruleta();
+        numeros=new Numero[38];
+        for(int i=0;i<38;i++){
+            numeros[i]=new Numero(i);
+        }
+    }
 }

@@ -57,4 +57,8 @@ public class Usuario {
     public String toString() {
         return "Usuario [Nombre: " + nombre + ", Fichas: " + fichas + "]";
     }
+
+    public void apostar(Apuesta apuesta){
+     
+    }
 }

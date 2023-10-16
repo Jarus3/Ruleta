@@ -4,30 +4,34 @@ package ruleta;
  * @author Nicolas Stepha Mamani Costas
  */
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class Apuesta {
+    protected Usuario usuario;
     protected ArrayList<Ficha> fichas;
-    protected int[] casillas;
+    private float multiplicador;
 
     public Apuesta() {
         fichas = new ArrayList<Ficha>();
-        casillas = new int[38];
+        usuario = new Usuario();
+        multiplicador = 0;
     }
 
-    public Apuesta(ArrayList<Ficha> fichas, int[] casillas) {
+    public Apuesta(ArrayList<Ficha> fichas, Usuario usuario, float multiplicador) {
         this.fichas = fichas;
-        this.casillas = casillas;
+        this.usuario = usuario;
+        this.multiplicador = multiplicador;
     }
 
     public Apuesta(ArrayList<Ficha> fichas) {
         this.fichas = fichas;
-        casillas = new int[38];
+        usuario = new Usuario();
+        multiplicador = 0;
     }
 
-    public Apuesta(int[] casillas) {
+    public Apuesta(float multiplicador) {
         fichas = new ArrayList<Ficha>();
-        this.casillas = casillas;
+        usuario = new Usuario();
+        this.multiplicador = multiplicador;
     }
 
     public ArrayList<Ficha> getFichas() {
@@ -36,10 +40,6 @@ public class Apuesta {
 
     public Ficha getFichas(int posicion) {
         return fichas.get(posicion);
-    }
-
-    public int getCasillas(int posicion) {
-        return casillas[posicion];
     }
 
     public void setFichas(ArrayList<Ficha> fichas) {
@@ -54,6 +54,6 @@ public class Apuesta {
     }
 
     public String toString() {
-        return "Apuesta [fichas=" + fichas + ", casillas=" + Arrays.toString(casillas) + "]";
+        return "Apuesta [usuario=" + usuario + "fichas=" + fichas + " multiplicador="+multiplicador+" ]";
     }
 }

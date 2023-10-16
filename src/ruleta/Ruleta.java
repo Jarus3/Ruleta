@@ -3,18 +3,30 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package ruleta;
-
+import java.util.ArrayList;
 /**
  *
- * @author Jarus
+ * @author Jaruslav Markowski
  */
 public class Ruleta {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+    private int numero;
+    private ArrayList<Integer> historial;
+    public Ruleta(){
+        numero=0;
+        historial=new ArrayList<Integer>();
     }
-    
+    public void girar(){
+        int salio;
+        salio=(int)Math.floor(Math.random()*38);
+        numero=salio;
+        historial.add(salio);
+    }
+    public ArrayList getHistorial(){
+        ArrayList<Integer> clone;
+        clone = (ArrayList<Integer>)historial.clone();
+        return clone;
+    }
+    public int getNumero(){
+        return numero;
+    }
 }

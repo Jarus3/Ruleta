@@ -1,5 +1,8 @@
 package ruleta;
-
+/**
+ *
+ * @author Nicolas Stepha Mamani Costas
+ */
 import java.util.ArrayList;
 import java.util.Arrays;
 

@@ -42,6 +42,10 @@ public class Usuario {
         this.fichas = fichas;
     }
 
+    public void setFichas(Ficha fichas) {
+        this.fichas.add(fichas);
+    }
+
     public String getNombre() {
         return nombre;
     }

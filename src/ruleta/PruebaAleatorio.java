@@ -6,7 +6,7 @@ package ruleta;
 
 /**
  *
- * @author Jarus
+ * @author Jaruslav Markowski
  */
 public class PruebaAleatorio {
     private int rep=100;           //numero de lanzamientos

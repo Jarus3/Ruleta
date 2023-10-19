@@ -4,6 +4,8 @@
  */
 package ruleta;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Nicolas Stephan Mamani Costas
@@ -12,8 +14,25 @@ public class Paridad extends Apuesta {
     private boolean par;
 
     public Paridad() {
-        super.multiplicador = 1;
+        super();
         par = true;
+    }
+
+    public Paridad(String nombreUsuario) {
+        super(nombreUsuario);
+        par = true;
+    }
+
+    public Paridad(boolean par, String nombreUsuario) {
+        super(nombreUsuario);
+        this.par = par;
+
+    }
+
+    public Paridad(boolean par, String nombreUsuario, ArrayList<Ficha> fichas) {
+        super(nombreUsuario, fichas);
+        this.par = par;
+
     }
 
     public boolean getPar() {

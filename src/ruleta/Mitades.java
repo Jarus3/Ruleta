@@ -4,6 +4,8 @@
  */
 package ruleta;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Nicolas Stephan Mamani Costas
@@ -12,8 +14,25 @@ public class Mitades extends Apuesta {
     private boolean superior;
 
     public Mitades() {
+        super();
         superior = true;
-        super.multiplicador = 1;
+    }
+
+    public Mitades(String nombreUsuario) {
+        super(nombreUsuario);
+        superior = true;
+    }
+
+    public Mitades(boolean superior, String nombreUsuario) {
+        super(nombreUsuario);
+        this.superior = superior;
+
+    }
+
+    public Mitades(boolean superior, String nombreUsuario, ArrayList<Ficha> fichas) {
+        super(nombreUsuario, fichas);
+        this.superior = superior;
+
     }
 
     public boolean getSuperior() {

@@ -38,6 +38,32 @@ public class Usuario {
         return fichas;
     }
 
+    public Ficha getFicha(int valor) {
+        for (Ficha ficha : fichas) {
+            if (ficha.getValor() == valor) {
+                return ficha;
+            }
+        }
+        return null;
+    }
+
+    public ArrayList<Ficha> getFichasPorCantidad(int cantidad) {
+        ArrayList<Ficha> fichasSeleccionadas = new ArrayList<>();
+        int sumaValores = 0;
+
+        for (Ficha ficha : fichas) {
+            if (sumaValores + ficha.getValor() <= cantidad) {
+                fichasSeleccionadas.add(ficha);
+                sumaValores += ficha.getValor();
+            }
+        }
+        if (sumaValores == cantidad) {
+            return fichasSeleccionadas;
+        } else {
+            return new ArrayList<Ficha>();
+        }
+    }
+
     public void setFichas(ArrayList<Ficha> fichas) {
         this.fichas = fichas;
     }
@@ -57,4 +83,5 @@ public class Usuario {
     public String toString() {
         return "Usuario [Nombre: " + nombre + ", Fichas: " + fichas + "]";
     }
+
 }

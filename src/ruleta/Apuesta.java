@@ -7,12 +7,18 @@ public class Apuesta {
     protected ArrayList<Ficha> fichas;
     protected float multiplicador;
     public Apuesta(){
-        fichas=new ArrayList();
+        fichas=new ArrayList<Ficha>();
         multiplicador=1;
         nombreUsuario="";
     }
     public Apuesta(String nombreUsuario){
-        fichas=new ArrayList();
+        fichas=new ArrayList<Ficha>();
+        multiplicador=1;
+        this.nombreUsuario=nombreUsuario;
+    }
+    
+    public Apuesta(String nombreUsuario, ArrayList<Ficha> fichas){
+        this.fichas=fichas;
         multiplicador=1;
         this.nombreUsuario=nombreUsuario;
     }

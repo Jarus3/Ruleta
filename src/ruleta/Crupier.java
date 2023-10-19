@@ -11,46 +11,19 @@ package ruleta;
 import java.util.ArrayList;
 
 public class Crupier {
-    private ArrayList<Apuesta> apuestas;
     private ArrayList<Ficha> banca;
-    private Mesa mesa;
 
     public Crupier() {
-        apuestas = new ArrayList<Apuesta>();
         banca = new ArrayList<Ficha>();
-        mesa = null;
     }
 
-    // public Crupier(ArrayList<Apuesta> apuestas) {
-    // this.apuestas = apuestas;
-    // banca = new ArrayList<Ficha>();
-    // mesa = null;
-    // }
-
-    // public Crupier(ArrayList<Ficha> banca) {
-    // apuestas = new ArrayList<Apuesta>();
-    // this.banca = banca;
-    // mesa=null;
-    // }
-
-    public Crupier(Mesa mesa) {
-        apuestas = new ArrayList<Apuesta>();
-        banca = new ArrayList<Ficha>();
-        this.mesa = mesa;
+    public Crupier(Ficha banca) {
+        this.banca = new ArrayList<Ficha>();
+        this.banca.add(banca);
     }
 
-    public Crupier(ArrayList<Apuesta> apuestas, ArrayList<Ficha> banca, Mesa mesa) {
-        this.apuestas = apuestas;
+    public Crupier(ArrayList<Ficha> banca) {
         this.banca = banca;
-        this.mesa = mesa;
-    }
-
-    public ArrayList<Apuesta> getApuestas() {
-        return apuestas;
-    }
-
-    public void setApuestas(ArrayList<Apuesta> apuestas) {
-        this.apuestas = apuestas;
     }
 
     public ArrayList<Ficha> getBanca() {
@@ -61,16 +34,12 @@ public class Crupier {
         this.banca = banca;
     }
 
-    public Mesa getMesa() {
-        return mesa;
-    }
-
-    public void setMesa(Mesa mesa) {
-        this.mesa = mesa;
+    public void setBanca(Ficha banca) {
+        this.banca.add(banca);
     }
 
     public String toString() {
-        return "Crupier [Apuestas: " + apuestas + ", Banca: " + banca + ", Mesa: " + mesa + "]";
+        return "Crupier [Banca: " + banca + "]";
     }
 
 }

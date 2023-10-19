@@ -21,7 +21,7 @@ public class Ruleta {
         numero=salio;
         historial.add(salio);
     }
-    public ArrayList getHistorial(){
+    public ArrayList<Integer> getHistorial(){
         ArrayList<Integer> clone;
         clone = (ArrayList<Integer>)historial.clone();
         return clone;

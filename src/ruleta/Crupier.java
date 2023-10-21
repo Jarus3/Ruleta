@@ -11,19 +11,21 @@ package ruleta;
 import java.util.ArrayList;
 
 public class Crupier {
+    
     private ArrayList<Ficha> banca;
+    private ArrayList<Usuario> jugadores;
+    private Mesa mesa;
 
     public Crupier() {
         banca = new ArrayList<Ficha>();
+        jugadores =new ArrayList<Usuario>();
+        mesa = new Mesa();
     }
 
-    public Crupier(Ficha banca) {
-        this.banca = new ArrayList<Ficha>();
-        this.banca.add(banca);
-    }
-
-    public Crupier(ArrayList<Ficha> banca) {
+    public Crupier(ArrayList<Ficha> banca, ArrayList<Usuario> jugadores, Mesa mesa) {
         this.banca = banca;
+        this.jugadores = jugadores;
+        this.mesa = mesa;
     }
 
     public ArrayList<Ficha> getBanca() {
@@ -38,8 +40,28 @@ public class Crupier {
         this.banca.add(banca);
     }
 
+    public ArrayList<Usuario> getJugadores() {
+        return jugadores;
+    }
+
+    public void setJugadores(ArrayList<Usuario> jugadores) {
+        this.jugadores = jugadores;
+    }
+
+    public void setJugadores(Usuario jugador) {
+        this.jugadores.add(jugador);
+    }
+
+    public Mesa getMesa() {
+        return mesa;
+    }
+
+    public void setMesa(Mesa mesa) {
+        this.mesa = mesa;
+    }
+
     public String toString() {
-        return "Crupier [Banca: " + banca + "]";
+        return "Crupier [Banca: " + banca + ", Jugadores: " + jugadores + ", Mesa: " + mesa + "]";
     }
 
 }

@@ -47,29 +47,53 @@ public class Usuario {
         return null;
     }
 
+    // public ArrayList<Ficha> getFichasPorCantidad(int cantidad) {
+    //     ArrayList<Ficha> fichasSeleccionadas = new ArrayList<>();
+    //     int sumaValores = 0;
+
+    //     for (Ficha ficha : fichas) {
+    //         if (sumaValores + ficha.getValor() <= cantidad) {
+    //             fichasSeleccionadas.add(ficha);
+    //             sumaValores += ficha.getValor();
+    //         }
+    //     }
+    //     if (sumaValores == cantidad) {
+    //         return fichasSeleccionadas;
+    //     } else {
+    //         return new ArrayList<Ficha>();
+    //     }
+    // }
+
     public ArrayList<Ficha> getFichasPorCantidad(int cantidad) {
         ArrayList<Ficha> fichasSeleccionadas = new ArrayList<>();
         int sumaValores = 0;
-
-        for (Ficha ficha : fichas) {
+        int i = 0;
+    
+        while (i < fichas.size()) {
+            Ficha ficha = fichas.get(i);
             if (sumaValores + ficha.getValor() <= cantidad) {
                 fichasSeleccionadas.add(ficha);
                 sumaValores += ficha.getValor();
+                fichas.remove(i);
+            } else {
+                i++;
             }
         }
+    
         if (sumaValores == cantidad) {
             return fichasSeleccionadas;
         } else {
-            return new ArrayList<Ficha>();
+            return null;
         }
     }
+    
 
     public void setFichas(ArrayList<Ficha> fichas) {
-        this.fichas = fichas;
+        this.fichas.addAll(fichas);
     }
 
-    public void setFichas(Ficha fichas) {
-        this.fichas.add(fichas);
+    public void setFicha(Ficha ficha) {
+        this.fichas.add(ficha);
     }
 
     public String getNombre() {
@@ -82,6 +106,12 @@ public class Usuario {
 
     public String toString() {
         return "Usuario [Nombre: " + nombre + ", Fichas: " + fichas + "]";
+    }
+
+    public Apuesta apuestaColor(int cantidad, String color){
+        ArrayList<Ficha> fichas = getFichasPorCantidad(cantidad);
+        Apuesta apuesta = new Color(color, nombre, fichas);
+        return apuesta;
     }
 
 }

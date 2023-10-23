@@ -125,6 +125,7 @@ public class UI extends javax.swing.JFrame {
         jLabel97 = new javax.swing.JLabel();
         jLabel98 = new javax.swing.JLabel();
         jLabel39 = new javax.swing.JLabel();
+        jLabel99 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -230,6 +231,9 @@ public class UI extends javax.swing.JFrame {
         jLabel39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/mesa.png"))); // NOI18N
         jLabel39.setText("mesa");
         jPanel1.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 160, 650, -1));
+
+        jLabel99.setText("jLabel99");
+        jPanel1.add(jLabel99, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 220, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -379,6 +383,7 @@ public class UI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel96;
     private javax.swing.JLabel jLabel97;
     private javax.swing.JLabel jLabel98;
+    private javax.swing.JLabel jLabel99;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

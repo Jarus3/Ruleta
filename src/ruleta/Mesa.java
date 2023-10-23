@@ -11,11 +11,12 @@ import java.util.ArrayList;
 public class Mesa {
     private Numero[] numeros;
     private Ruleta ruleta;
-    private Crupier crupier;
     private ArrayList<Apuesta> apuestas;
+    private Numero ganador;
     public Mesa(){
         ruleta=new Ruleta();
         numeros=new Numero[38];
+        ganador=new Numero();
         apuestas=new ArrayList<Apuesta>();
         for(int i=0;i<38;i++){
             numeros[i]=new Numero(i);
@@ -31,5 +32,9 @@ public class Mesa {
     public ArrayList<Apuesta> getApuestas() {
         return (ArrayList<Apuesta>)apuestas.clone();
     }
-    
+    public Numero getGanador(){
+        ruleta.girar();
+        ganador=new Numero(ruleta.getNumero());
+        return ganador;
+    }
 }

@@ -6,32 +6,36 @@ package ruleta;
 
 /**
  *
- * @author Nicolas Stepha Mamani Costas
+ * @author Nicolas Stepha Mamani Costas y Jaruslav Markowski
  */
 import java.util.ArrayList;
 
 public class Usuario {
     private ArrayList<Ficha> fichas;
     private String nombre;
-
+    private ArrayList<Apuesta> apuestas;
     public Usuario() {
         fichas = new ArrayList<Ficha>();
+        apuestas = new ArrayList<Apuesta>();
         nombre = null;
     }
 
     public Usuario(ArrayList<Ficha> fichas) {
         this.fichas = fichas;
+        apuestas = new ArrayList<Apuesta>();
         nombre = null;
     }
 
     public Usuario(String nombre) {
         fichas = new ArrayList<Ficha>();
+        apuestas = new ArrayList<Apuesta>();
         this.nombre = nombre;
     }
 
     public Usuario(ArrayList<Ficha> fichas, String nombre) {
         this.fichas = fichas;
         this.nombre = nombre;
+        apuestas = new ArrayList<Apuesta>();
     }
 
     public ArrayList<Ficha> getFichas() {
@@ -108,10 +112,59 @@ public class Usuario {
         return "Usuario [Nombre: " + nombre + ", Fichas: " + fichas + "]";
     }
 
-    public Apuesta apuestaColor(int cantidad, String color){
-        ArrayList<Ficha> fichas = getFichasPorCantidad(cantidad);
-        Apuesta apuesta = new Color(color, nombre, fichas);
-        return apuesta;
+    public ArrayList<Apuesta> getApuestas() {
+        return (ArrayList<Apuesta>)apuestas.clone();
     }
 
+    public void apuestaColor(int cantidad, String color){
+        ArrayList<Ficha> fichas = getFichasPorCantidad(cantidad);
+        Apuesta apuesta = new Color(color, nombre, fichas);
+        apuestas.add(apuesta);
+    }
+
+    public void apuestaParidad(int cantidad, boolean par){
+        ArrayList<Ficha> fichas = getFichasPorCantidad(cantidad);
+        Apuesta apuesta = new Paridad(par, nombre, fichas);
+        apuestas.add(apuesta);
+    }
+    public void apuestaMitades(int cantidad, boolean superior){
+        ArrayList<Ficha> fichas = getFichasPorCantidad(cantidad);
+        Apuesta apuesta = new Mitades(superior, nombre, fichas);
+        apuestas.add(apuesta);
+    }
+    public void apuestaColumna(int cantidad, int columna){
+        ArrayList<Ficha> fichas = getFichasPorCantidad(cantidad);
+        Apuesta apuesta = new Columna( nombre, fichas,columna);
+        apuestas.add(apuesta);
+    }
+    public void apuestaDocena(int cantidad, int docena){
+        ArrayList<Ficha> fichas = getFichasPorCantidad(cantidad);
+        Apuesta apuesta = new Docena(docena, nombre, fichas);
+        apuestas.add(apuesta);
+    }
+    public void apuestaNumero(int cantidad, int valor){
+        ArrayList<Ficha> fichas = getFichasPorCantidad(cantidad);
+        Apuesta apuesta = new ApuestaNumero(valor, nombre, fichas);
+        apuestas.add(apuesta);
+    }
+    public void apuestaDobleLinea(int cantidad, int linea1,int linea2){
+        ArrayList<Ficha> fichas = getFichasPorCantidad(cantidad);
+        Apuesta apuesta = new DobleLinea(linea1,linea2, nombre, fichas);
+        apuestas.add(apuesta);
+    }
+    public void apuestaTrio(int cantidad, int valor1,int valor2,int valor3){
+        ArrayList<Ficha> fichas = getFichasPorCantidad(cantidad);
+        Apuesta apuesta = new Trio(valor1,valor2,valor3, nombre, fichas);
+        apuestas.add(apuesta);
+    }
+    public void apuestaCuatro(int cantidad, int valor1,int valor2,int valor3,  int valor4){
+        ArrayList<Ficha> fichas = getFichasPorCantidad(cantidad);
+        Apuesta apuesta = new Cuatro(valor1,valor2,valor3,valor4, nombre, fichas);
+        apuestas.add(apuesta);
+    }
+    public void apuestaDuo(int cantidad, int valor1,int valor2){
+        ArrayList<Ficha> fichas = getFichasPorCantidad(cantidad);
+        Apuesta apuesta = new Duo(valor1,valor2, nombre, fichas);
+        apuestas.add(apuesta);
+    }
 }

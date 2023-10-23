@@ -13,11 +13,10 @@ public class UI extends javax.swing.JFrame {
     /**
      * Creates new form UI
      */
-    private Crupier crupier; 
-    private int ficha; 
+    private Crupier crupier;
+     
     public UI() {
         initComponents();
-        ficha=1;
     }
 
     /**
@@ -193,265 +192,46 @@ public class UI extends javax.swing.JFrame {
         jLabel162 = new javax.swing.JLabel();
         jLabel163 = new javax.swing.JLabel();
         jLabel39 = new javax.swing.JLabel();
-        jLabel164 = new javax.swing.JLabel();
-        jLabel166 = new javax.swing.JLabel();
-        jLabel167 = new javax.swing.JLabel();
-        jLabel168 = new javax.swing.JLabel();
+        jLabel99 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel1MouseClicked(evt);
-            }
-        });
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 310, 20, 30));
-
-        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel2MouseClicked(evt);
-            }
-        });
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 260, 20, 30));
-
-        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel3MouseClicked(evt);
-            }
-        });
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 200, 20, 40));
-
-        jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel4MouseClicked(evt);
-            }
-        });
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 310, 20, 30));
-
-        jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel5MouseClicked(evt);
-            }
-        });
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 260, 20, 30));
-
-        jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel6MouseClicked(evt);
-            }
-        });
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 200, 20, 40));
-
-        jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel7MouseClicked(evt);
-            }
-        });
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 310, 20, 30));
-
-        jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel8MouseClicked(evt);
-            }
-        });
         jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 260, 20, 30));
-
-        jLabel9.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel9MouseClicked(evt);
-            }
-        });
         jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 200, 20, 40));
-
-        jLabel10.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel10MouseClicked(evt);
-            }
-        });
         jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 310, 20, 30));
-
-        jLabel11.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel11MouseClicked(evt);
-            }
-        });
         jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 260, 20, 30));
-
-        jLabel12.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel12MouseClicked(evt);
-            }
-        });
         jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 200, 20, 40));
-
-        jLabel13.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel13MouseClicked(evt);
-            }
-        });
         jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 310, 20, 30));
-
-        jLabel14.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel14MouseClicked(evt);
-            }
-        });
         jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 260, 20, 30));
-
-        jLabel15.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel15MouseClicked(evt);
-            }
-        });
         jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 200, 20, 40));
-
-        jLabel16.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel16MouseClicked(evt);
-            }
-        });
         jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 310, 20, 30));
-
-        jLabel17.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel17MouseClicked(evt);
-            }
-        });
         jPanel1.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 260, 20, 30));
-
-        jLabel18.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel18MouseClicked(evt);
-            }
-        });
         jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 200, 20, 40));
-
-        jLabel19.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel19MouseClicked(evt);
-            }
-        });
         jPanel1.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 310, 20, 30));
-
-        jLabel20.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel20MouseClicked(evt);
-            }
-        });
         jPanel1.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 260, 20, 30));
-
-        jLabel21.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel21MouseClicked(evt);
-            }
-        });
         jPanel1.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 200, 20, 40));
-
-        jLabel22.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel22MouseClicked(evt);
-            }
-        });
         jPanel1.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 310, 20, 30));
-
-        jLabel23.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel23MouseClicked(evt);
-            }
-        });
         jPanel1.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 260, 20, 30));
-
-        jLabel24.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel24MouseClicked(evt);
-            }
-        });
         jPanel1.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 200, 20, 40));
-
-        jLabel25.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel25MouseClicked(evt);
-            }
-        });
         jPanel1.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 310, 20, 30));
-
-        jLabel26.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel26MouseClicked(evt);
-            }
-        });
         jPanel1.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 260, 20, 30));
-
-        jLabel27.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel27MouseClicked(evt);
-            }
-        });
         jPanel1.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 200, 20, 40));
-
-        jLabel28.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel28MouseClicked(evt);
-            }
-        });
         jPanel1.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 310, 20, 30));
-
-        jLabel29.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel29MouseClicked(evt);
-            }
-        });
         jPanel1.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 260, 20, 30));
-
-        jLabel30.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel30MouseClicked(evt);
-            }
-        });
         jPanel1.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 200, 20, 40));
-
-        jLabel31.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel31MouseClicked(evt);
-            }
-        });
         jPanel1.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 310, 20, 30));
-
-        jLabel32.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel32MouseClicked(evt);
-            }
-        });
         jPanel1.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 260, 20, 30));
-
-        jLabel33.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel33MouseClicked(evt);
-            }
-        });
         jPanel1.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 200, 20, 40));
-
-        jLabel34.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel34MouseClicked(evt);
-            }
-        });
         jPanel1.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 310, 20, 30));
-
-        jLabel35.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel35MouseClicked(evt);
-            }
-        });
         jPanel1.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 260, 20, 30));
-
-        jLabel36.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel36MouseClicked(evt);
-            }
-        });
         jPanel1.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 200, 20, 40));
         jPanel1.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 300, 20, 30));
         jPanel1.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 210, 20, 40));
@@ -586,35 +366,8 @@ public class UI extends javax.swing.JFrame {
         jLabel39.setText("mesa");
         jPanel1.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 160, 650, -1));
 
-        jLabel164.setText("jLabel99");
-        jPanel1.add(jLabel164, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 220, -1, -1));
-
-        jLabel166.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fichas1.jpg"))); // NOI18N
-        jLabel166.setText("1");
-        jLabel166.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel166MouseClicked(evt);
-            }
-        });
-        jPanel1.add(jLabel166, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 70, 80, -1));
-
-        jLabel167.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fichas5a.jpg"))); // NOI18N
-        jLabel167.setText("5");
-        jLabel167.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel167MouseClicked(evt);
-            }
-        });
-        jPanel1.add(jLabel167, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 70, 90, -1));
-
-        jLabel168.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fichas25.jpg"))); // NOI18N
-        jLabel168.setText("25");
-        jLabel168.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel168MouseClicked(evt);
-            }
-        });
-        jPanel1.add(jLabel168, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 70, 90, -1));
+        jLabel99.setText("jLabel99");
+        jPanel1.add(jLabel99, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 220, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -629,162 +382,6 @@ public class UI extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
-        crupier.getJugadores().get(0).apuestaNumero(ficha, 1);
-    }//GEN-LAST:event_jLabel1MouseClicked
-    
-    private void jLabel166MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel166MouseClicked
-        ficha=1;
-    }//GEN-LAST:event_jLabel166MouseClicked
-
-    private void jLabel167MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel167MouseClicked
-        ficha=5;
-    }//GEN-LAST:event_jLabel167MouseClicked
-
-    private void jLabel168MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel168MouseClicked
-        ficha=25;
-    }//GEN-LAST:event_jLabel168MouseClicked
-
-    private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
-        crupier.getJugadores().get(0).apuestaNumero(ficha, 2);
-    }//GEN-LAST:event_jLabel2MouseClicked
-
-    private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
-        crupier.getJugadores().get(0).apuestaNumero(ficha, 3);
-    }//GEN-LAST:event_jLabel3MouseClicked
-
-    private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
-        crupier.getJugadores().get(0).apuestaNumero(ficha, 4);
-    }//GEN-LAST:event_jLabel4MouseClicked
-
-    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
-        crupier.getJugadores().get(0).apuestaNumero(ficha, 5);
-    }//GEN-LAST:event_jLabel5MouseClicked
-
-    private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
-        crupier.getJugadores().get(0).apuestaNumero(ficha, 6);
-    }//GEN-LAST:event_jLabel6MouseClicked
-
-    private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
-        crupier.getJugadores().get(0).apuestaNumero(ficha, 7);
-    }//GEN-LAST:event_jLabel7MouseClicked
-
-    private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
-        crupier.getJugadores().get(0).apuestaNumero(ficha, 8);
-    }//GEN-LAST:event_jLabel8MouseClicked
-
-    private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
-        crupier.getJugadores().get(0).apuestaNumero(ficha, 9);
-    }//GEN-LAST:event_jLabel9MouseClicked
-
-    private void jLabel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseClicked
-        crupier.getJugadores().get(0).apuestaNumero(ficha, 10);
-    }//GEN-LAST:event_jLabel10MouseClicked
-
-    private void jLabel11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MouseClicked
-        crupier.getJugadores().get(0).apuestaNumero(ficha, 11);
-    }//GEN-LAST:event_jLabel11MouseClicked
-
-    private void jLabel12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel12MouseClicked
-        crupier.getJugadores().get(0).apuestaNumero(ficha, 12);
-    }//GEN-LAST:event_jLabel12MouseClicked
-
-    private void jLabel13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel13MouseClicked
-        crupier.getJugadores().get(0).apuestaNumero(ficha, 13);
-    }//GEN-LAST:event_jLabel13MouseClicked
-
-    private void jLabel15MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel15MouseClicked
-        crupier.getJugadores().get(0).apuestaNumero(ficha, 15);
-    }//GEN-LAST:event_jLabel15MouseClicked
-
-    private void jLabel14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel14MouseClicked
-        crupier.getJugadores().get(0).apuestaNumero(ficha, 14);
-    }//GEN-LAST:event_jLabel14MouseClicked
-
-    private void jLabel16MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel16MouseClicked
-        crupier.getJugadores().get(0).apuestaNumero(ficha, 16);
-    }//GEN-LAST:event_jLabel16MouseClicked
-
-    private void jLabel17MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel17MouseClicked
-        crupier.getJugadores().get(0).apuestaNumero(ficha, 17);
-    }//GEN-LAST:event_jLabel17MouseClicked
-
-    private void jLabel18MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel18MouseClicked
-        crupier.getJugadores().get(0).apuestaNumero(ficha, 18);
-    }//GEN-LAST:event_jLabel18MouseClicked
-
-    private void jLabel19MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel19MouseClicked
-        crupier.getJugadores().get(0).apuestaNumero(ficha, 19);
-    }//GEN-LAST:event_jLabel19MouseClicked
-
-    private void jLabel20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel20MouseClicked
-        crupier.getJugadores().get(0).apuestaNumero(ficha, 20);
-    }//GEN-LAST:event_jLabel20MouseClicked
-
-    private void jLabel21MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel21MouseClicked
-        crupier.getJugadores().get(0).apuestaNumero(ficha, 21);
-    }//GEN-LAST:event_jLabel21MouseClicked
-
-    private void jLabel22MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel22MouseClicked
-        crupier.getJugadores().get(0).apuestaNumero(ficha, 22);
-    }//GEN-LAST:event_jLabel22MouseClicked
-
-    private void jLabel23MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel23MouseClicked
-        crupier.getJugadores().get(0).apuestaNumero(ficha, 23);
-    }//GEN-LAST:event_jLabel23MouseClicked
-
-    private void jLabel24MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel24MouseClicked
-        crupier.getJugadores().get(0).apuestaNumero(ficha, 24);
-    }//GEN-LAST:event_jLabel24MouseClicked
-
-    private void jLabel25MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel25MouseClicked
-        crupier.getJugadores().get(0).apuestaNumero(ficha, 25);
-    }//GEN-LAST:event_jLabel25MouseClicked
-
-    private void jLabel26MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel26MouseClicked
-        crupier.getJugadores().get(0).apuestaNumero(ficha, 26);
-    }//GEN-LAST:event_jLabel26MouseClicked
-
-    private void jLabel27MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel27MouseClicked
-        crupier.getJugadores().get(0).apuestaNumero(ficha, 37);
-    }//GEN-LAST:event_jLabel27MouseClicked
-
-    private void jLabel28MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel28MouseClicked
-        crupier.getJugadores().get(0).apuestaNumero(ficha, 28);
-    }//GEN-LAST:event_jLabel28MouseClicked
-
-    private void jLabel29MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel29MouseClicked
-        crupier.getJugadores().get(0).apuestaNumero(ficha, 29);
-    }//GEN-LAST:event_jLabel29MouseClicked
-
-    private void jLabel30MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel30MouseClicked
-        crupier.getJugadores().get(0).apuestaNumero(ficha, 30);
-    }//GEN-LAST:event_jLabel30MouseClicked
-
-    private void jLabel31MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel31MouseClicked
-        crupier.getJugadores().get(0).apuestaNumero(ficha, 31);
-    }//GEN-LAST:event_jLabel31MouseClicked
-
-    private void jLabel32MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel32MouseClicked
-        crupier.getJugadores().get(0).apuestaNumero(ficha, 32);
-    }//GEN-LAST:event_jLabel32MouseClicked
-
-    private void jLabel33MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel33MouseClicked
-        crupier.getJugadores().get(0).apuestaNumero(ficha, 33);
-    }//GEN-LAST:event_jLabel33MouseClicked
-
-    private void jLabel34MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel34MouseClicked
-        crupier.getJugadores().get(0).apuestaNumero(ficha, 34);
-    }//GEN-LAST:event_jLabel34MouseClicked
-
-    private void jLabel35MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel35MouseClicked
-        crupier.getJugadores().get(0).apuestaNumero(ficha, 35);
-    }//GEN-LAST:event_jLabel35MouseClicked
-
-    private void jLabel36MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel36MouseClicked
-        crupier.getJugadores().get(0).apuestaNumero(ficha, 36);
-    }//GEN-LAST:event_jLabel36MouseClicked
 
     /**
      * @param args the command line arguments
@@ -894,10 +491,6 @@ public class UI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel161;
     private javax.swing.JLabel jLabel162;
     private javax.swing.JLabel jLabel163;
-    private javax.swing.JLabel jLabel164;
-    private javax.swing.JLabel jLabel166;
-    private javax.swing.JLabel jLabel167;
-    private javax.swing.JLabel jLabel168;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;

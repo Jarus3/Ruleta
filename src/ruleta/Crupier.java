@@ -12,52 +12,68 @@ import java.util.ArrayList;
 
 public class Crupier {
     
-    private ArrayList<Ficha> banca;
-    private ArrayList<Usuario> jugadores;
+    private Tupla[] banca;
+    private Usuario jugador;
     private Mesa mesa;
     private Numero ganador;
     private ArrayList<Apuesta> apuestas;
     private ArrayList<Apuesta> ganadores;
     public Crupier() {
-        banca = new ArrayList<Ficha>();
+        banca = new Tupla[3];
+        banca[0]=new Tupla(new Ficha(1,"amarillo"),100);
+        banca[1]=new Tupla(new Ficha(5,"verde"),100);
+        banca[2]=new Tupla(new Ficha(25,"rojo"),100);
         ganador=new Numero();
         apuestas=new ArrayList<>();
         ganadores=new ArrayList<>();
-        jugadores =new ArrayList<Usuario>();
+        jugador =new Usuario();
         mesa = new Mesa();
     }
 
-    public Crupier(ArrayList<Ficha> banca, ArrayList<Usuario> jugadores, Mesa mesa) {
+    public Crupier(Tupla[] banca, Usuario jugador, Mesa mesa) {
         this.banca = banca;
         ganador=new Numero();
         apuestas=new ArrayList<>();
         ganadores=new ArrayList<>();
-        this.jugadores = jugadores;
+        this.jugador = jugador;
         this.mesa = mesa;
     }
 
-    public ArrayList<Ficha> getBanca() {
+    public Tupla[] getBanca() {
         return banca;
     }
 
-    public void setBanca(ArrayList<Ficha> banca) {
+    public void setBanca(Tupla[] banca) {
         this.banca = banca;
     }
 
-    public void setBanca(Ficha banca) {
-        this.banca.add(banca);
+    public void setBanca(Ficha ficha) {
+        int aux=ficha.getValor();
+        switch(aux){
+            case 1 -> banca[0].addCantidad(1);
+            case 5 -> banca[1].addCantidad(1);
+            case 25 -> banca[2].addCantidad(1);
+            default -> {
+            }
+        }
+    }
+    public void setBanca(Ficha ficha,int extra) {
+        int aux=ficha.getValor();
+        switch(aux){
+            case 1 -> banca[0].addCantidad(extra);
+            case 5 -> banca[1].addCantidad(extra);
+            case 25 -> banca[2].addCantidad(extra);
+            default -> {
+            }
+        }
     }
 
-    public ArrayList<Usuario> getJugadores() {
-        return jugadores;
+    public Usuario getJugador() {
+        return jugador;
     }
 
-    public void setJugadores(ArrayList<Usuario> jugadores) {
-        this.jugadores = jugadores;
-    }
-
-    public void setJugadores(Usuario jugador) {
-        this.jugadores.add(jugador);
+    public void setJugador(Usuario jugador) {
+        this.jugador = jugador;
     }
 
     public Mesa getMesa() {
@@ -68,14 +84,13 @@ public class Crupier {
         this.mesa = mesa;
     }
 
+    @Override
     public String toString() {
-        return "Crupier [Banca: " + banca + ", Jugadores: " + jugadores + ", Mesa: " + mesa + "]";
+        return "Crupier [Jugador: " + jugador + ", Mesa: " + mesa + "]";
     }
 
     public void getApuestas(){
-        for(int i=0;i<jugadores.size();){
-            apuestas.addAll(jugadores.get(i).getApuestas());
-        }
+        apuestas=jugador.getApuestas();
     }
     public void ganadores(){
         ganador=mesa.getGanador();
@@ -83,7 +98,7 @@ public class Crupier {
         for(int i=0;i<apuestas.size();){
             aux=apuestas.get(i);
             if(gano(aux,ganador)){
-                ganadores.add(aux);
+                jugador.setFicha(ficha);
             }
         }
     }
@@ -161,5 +176,29 @@ public class Crupier {
             }
         }
         return aux;
+    }
+    public Tupla[] getFichasPorCantidad(int cantidad) {
+        Tupla[] fichasSeleccionadas = new Tupla[3];
+        banca[0]=new Tupla(new Ficha(1,"amarillo"),0);
+        banca[1]=new Tupla(new Ficha(5,"verde"),0);
+        banca[2]=new Tupla(new Ficha(25,"rojo"),0);
+        int sumaValores = cantidad;
+        int i = 2;
+        while (i >= 0) {
+            Ficha ficha = banca[i].getFicha();
+            if(sumaValores<ficha.getValor()){
+                int aux=sumaValores/ficha.getValor();
+                
+                aux=aux*(-1);
+                banca[i].addCantidad(aux);
+            }
+            
+        }
+    
+        if (sumaValores == cantidad) {
+            return fichasSeleccionadas;
+        } else {
+            return null;
+        }
     }
 }

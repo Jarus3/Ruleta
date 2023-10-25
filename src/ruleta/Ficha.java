@@ -27,6 +27,15 @@ public class Ficha {
         this.valor=valor;
         this.color=color;
     }
+
+    public void setValor(int valor) {
+        this.valor = valor;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+    
     public int getValor(){
         return valor;
     }

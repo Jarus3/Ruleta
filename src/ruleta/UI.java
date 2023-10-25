@@ -652,7 +652,7 @@ public class UI extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel67MouseClicked
 
     private void jLabel38MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel38MouseClicked
-        crupier.getJugadores().get(0).apuestaNumero(ficha, 38);
+        crupier.getJugador().apuestaNumero(ficha, 38);
     }//GEN-LAST:event_jLabel38MouseClicked
 
     private void jLabel39MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel39MouseClicked

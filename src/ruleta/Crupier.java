@@ -99,7 +99,8 @@ public class Crupier {
         for(int i=0;i<apuestas.size();){
             aux=apuestas.get(i);
             if(gano(aux,ganador)){
-                premio=aux.getMultiplicador();
+                premio=(int)aux.getMultiplicador()*aux.getFichas().getValor();
+                jugador.addDinero(premio);
             }
         }
     }

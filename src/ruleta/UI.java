@@ -198,6 +198,7 @@ public class UI extends javax.swing.JFrame {
         jLabel167 = new javax.swing.JLabel();
         jLabel168 = new javax.swing.JLabel();
         jLabel39 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -537,6 +538,12 @@ public class UI extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jLabel70, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 210, 10, 30));
+
+        jLabel71.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel71MouseClicked(evt);
+            }
+        });
         jPanel1.add(jLabel71, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 310, 20, 30));
         jPanel1.add(jLabel72, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 260, 20, 30));
         jPanel1.add(jLabel73, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 200, 20, 40));
@@ -733,6 +740,14 @@ public class UI extends javax.swing.JFrame {
         jLabel39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/mesa.png"))); // NOI18N
         jLabel39.setText("mesa");
         jPanel1.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 160, 650, -1));
+
+        jButton1.setText("GIRAR");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 330, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -989,6 +1004,14 @@ public class UI extends javax.swing.JFrame {
         ficha.setValor(25);
         System.out.println(ficha);
     }//GEN-LAST:event_jLabel168MouseClicked
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jLabel71MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel71MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel71MouseClicked
    
     /**
      * @param args the command line arguments
@@ -1026,6 +1049,7 @@ public class UI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel100;

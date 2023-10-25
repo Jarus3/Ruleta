@@ -6,8 +6,8 @@ package ruleta;
 import java.awt.Color;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
-
-
+import java.awt.Image;
+import java.awt.Dimension;
 /**
  *
  * @author Nicolas
@@ -29,12 +29,31 @@ public class UI extends javax.swing.JFrame {
         jLabel170.setText(""+crupier.getJugador().getDinero());
     }
 
-    private void ponerFicha(JLabel etiqueta){
-        etiqueta.setOpaque(true);
-        ImageIcon nuevaImagen = new ImageIcon(getClass().getResource("/imagenes/ficha1.png"));
-        etiqueta.setIcon(nuevaImagen);
-        etiqueta.repaint();
-        jLabel170.setText(""+crupier.getJugador().getDinero());
+//    private void ponerFicha(JLabel etiqueta){
+//        etiqueta.setOpaque(true);
+//        ImageIcon nuevaImagen = new ImageIcon(getClass().getResource("/imagenes/ficha1.png"));
+//        etiqueta.setIcon(nuevaImagen);
+//        etiqueta.repaint();
+//        jLabel170.setText(""+crupier.getJugador().getDinero());
+//    }
+    private void ponerFicha(JLabel etiqueta) {
+        etiqueta.setOpaque(false); // Configura la opacidad a false para que no se muestre el fondo
+        ImageIcon nuevaImagen = new ImageIcon(getClass().getResource("/imagenes/ficha.png"));
+
+        // Obtiene la imagen original
+        Image imagenOriginal = nuevaImagen.getImage();
+
+        // Reescala la imagen a 20x20 px
+        Image imagenEscalada = imagenOriginal.getScaledInstance(20, 20, Image.SCALE_SMOOTH);
+
+        // Crea un nuevo ImageIcon con la imagen escalada
+        ImageIcon imagenEscaladaIcon = new ImageIcon(imagenEscalada);
+
+        etiqueta.setIcon(imagenEscaladaIcon);
+        
+        etiqueta.revalidate(); // Vuelve a validar la etiqueta para que el cambio de tamaño surta efecto
+        
+        jLabel170.setText("" + crupier.getJugador().getDinero());
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -211,6 +230,7 @@ public class UI extends javax.swing.JFrame {
         jLabel166 = new javax.swing.JLabel();
         jLabel167 = new javax.swing.JLabel();
         jLabel168 = new javax.swing.JLabel();
+        jLabel172 = new javax.swing.JLabel();
         jLabel39 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jLabel164 = new javax.swing.JLabel();
@@ -496,28 +516,28 @@ public class UI extends javax.swing.JFrame {
                 jLabel40MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 290, 20, 20));
+        jPanel1.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(345, 290, 20, 20));
 
         jLabel41.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel41MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 240, 20, 10));
+        jPanel1.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(345, 235, 20, 20));
 
         jLabel42.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel42MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 290, 20, 20));
+        jPanel1.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(382, 290, 20, 20));
 
         jLabel43.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel43MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 240, 20, 10));
+        jPanel1.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(382, 235, 20, 20));
 
         jLabel44.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -531,35 +551,35 @@ public class UI extends javax.swing.JFrame {
                 jLabel45MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 240, 20, 10));
+        jPanel1.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 235, 20, 20));
 
         jLabel46.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel46MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 290, 20, 20));
+        jPanel1.add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(457, 290, 20, 20));
 
         jLabel47.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel47MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 240, 20, 10));
+        jPanel1.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(457, 235, 20, 20));
 
         jLabel48.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel48MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 290, 20, 20));
+        jPanel1.add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(493, 290, 20, 20));
 
         jLabel49.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel49MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 240, 20, 10));
+        jPanel1.add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(493, 235, 20, 20));
 
         jLabel50.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -573,49 +593,49 @@ public class UI extends javax.swing.JFrame {
                 jLabel51MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel51, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 240, 20, 10));
+        jPanel1.add(jLabel51, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 235, 20, 20));
 
         jLabel52.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel52MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 290, 20, 20));
+        jPanel1.add(jLabel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(568, 290, 20, 20));
 
         jLabel53.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel53MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 240, 20, 10));
+        jPanel1.add(jLabel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(568, 235, 20, 20));
 
         jLabel54.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel54MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel54, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 290, 20, 20));
+        jPanel1.add(jLabel54, new org.netbeans.lib.awtextra.AbsoluteConstraints(622, 290, 20, 20));
 
         jLabel55.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel55MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel55, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 240, 20, 10));
+        jPanel1.add(jLabel55, new org.netbeans.lib.awtextra.AbsoluteConstraints(604, 235, 20, 20));
 
         jLabel56.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel56MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 290, 20, 20));
+        jPanel1.add(jLabel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(643, 290, 20, 20));
 
         jLabel57.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel57MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel57, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 240, 20, 10));
+        jPanel1.add(jLabel57, new org.netbeans.lib.awtextra.AbsoluteConstraints(643, 235, 20, 20));
 
         jLabel58.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -629,21 +649,21 @@ public class UI extends javax.swing.JFrame {
                 jLabel59MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel59, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 240, 20, 10));
+        jPanel1.add(jLabel59, new org.netbeans.lib.awtextra.AbsoluteConstraints(678, 235, 20, 20));
 
         jLabel60.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel60MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel60, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 290, 20, 20));
+        jPanel1.add(jLabel60, new org.netbeans.lib.awtextra.AbsoluteConstraints(714, 290, 20, 20));
 
         jLabel61.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel61MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel61, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 240, 20, 10));
+        jPanel1.add(jLabel61, new org.netbeans.lib.awtextra.AbsoluteConstraints(714, 235, 20, 20));
 
         jLabel62.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -657,241 +677,241 @@ public class UI extends javax.swing.JFrame {
                 jLabel63MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel63, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 240, 20, 10));
+        jPanel1.add(jLabel63, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 235, 20, 20));
 
         jLabel64.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel64MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel64, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 310, 10, 30));
+        jPanel1.add(jLabel64, new org.netbeans.lib.awtextra.AbsoluteConstraints(364, 313, 20, 20));
 
         jLabel65.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel65MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel65, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 260, 10, 30));
+        jPanel1.add(jLabel65, new org.netbeans.lib.awtextra.AbsoluteConstraints(364, 260, 20, 20));
 
         jLabel66.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel66MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel66, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 210, 10, 30));
+        jPanel1.add(jLabel66, new org.netbeans.lib.awtextra.AbsoluteConstraints(364, 212, 20, 20));
 
         jLabel67.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/ruleta.jpg"))); // NOI18N
-        jPanel1.add(jLabel67, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 290, 270));
+        jPanel1.add(jLabel67, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 290, 280));
 
         jLabel68.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel68MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel68, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 310, 10, 30));
+        jPanel1.add(jLabel68, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 313, 20, 20));
 
         jLabel69.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel69MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel69, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 260, 10, 30));
+        jPanel1.add(jLabel69, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 260, 20, 20));
 
         jLabel70.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel70MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel70, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 210, 10, 30));
+        jPanel1.add(jLabel70, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 212, 20, 20));
 
         jLabel71.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel71MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel71, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 310, 20, 30));
+        jPanel1.add(jLabel71, new org.netbeans.lib.awtextra.AbsoluteConstraints(437, 313, 20, 20));
 
         jLabel72.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel72MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel72, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 260, 20, 30));
+        jPanel1.add(jLabel72, new org.netbeans.lib.awtextra.AbsoluteConstraints(437, 260, 20, 20));
 
         jLabel73.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel73MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel73, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 200, 20, 40));
+        jPanel1.add(jLabel73, new org.netbeans.lib.awtextra.AbsoluteConstraints(437, 212, 20, 20));
 
         jLabel74.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel74MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel74, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 310, 10, 30));
+        jPanel1.add(jLabel74, new org.netbeans.lib.awtextra.AbsoluteConstraints(475, 313, 20, 20));
 
         jLabel75.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel75MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel75, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 260, 10, 30));
+        jPanel1.add(jLabel75, new org.netbeans.lib.awtextra.AbsoluteConstraints(475, 260, 20, 20));
 
         jLabel76.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel76MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel76, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 200, 10, 40));
+        jPanel1.add(jLabel76, new org.netbeans.lib.awtextra.AbsoluteConstraints(475, 212, 20, 20));
 
         jLabel77.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel77MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel77, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 310, 20, 30));
+        jPanel1.add(jLabel77, new org.netbeans.lib.awtextra.AbsoluteConstraints(512, 313, 20, 20));
 
         jLabel78.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel78MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel78, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 260, 20, 30));
+        jPanel1.add(jLabel78, new org.netbeans.lib.awtextra.AbsoluteConstraints(512, 260, 20, 20));
 
         jLabel79.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel79MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel79, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 200, 20, 40));
+        jPanel1.add(jLabel79, new org.netbeans.lib.awtextra.AbsoluteConstraints(512, 212, 20, 20));
 
         jLabel80.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel80MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel80, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 310, 20, 30));
+        jPanel1.add(jLabel80, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 313, 20, 20));
 
         jLabel81.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel81MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel81, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 260, 20, 30));
+        jPanel1.add(jLabel81, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 260, 20, 20));
 
         jLabel82.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel82MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel82, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 200, 20, 40));
+        jPanel1.add(jLabel82, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 212, 20, 20));
 
         jLabel83.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel83MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel83, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 310, 10, 30));
+        jPanel1.add(jLabel83, new org.netbeans.lib.awtextra.AbsoluteConstraints(585, 313, 20, 20));
 
         jLabel84.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel84MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel84, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 260, 10, 30));
+        jPanel1.add(jLabel84, new org.netbeans.lib.awtextra.AbsoluteConstraints(585, 260, 20, 20));
 
         jLabel85.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel85MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel85, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 200, 10, 40));
+        jPanel1.add(jLabel85, new org.netbeans.lib.awtextra.AbsoluteConstraints(585, 212, 20, 20));
 
         jLabel86.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel86MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel86, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 310, 20, 30));
+        jPanel1.add(jLabel86, new org.netbeans.lib.awtextra.AbsoluteConstraints(622, 313, 20, 20));
 
         jLabel87.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel87MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel87, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 260, 20, 30));
+        jPanel1.add(jLabel87, new org.netbeans.lib.awtextra.AbsoluteConstraints(622, 260, 20, 20));
 
         jLabel88.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel88MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel88, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 200, 20, 40));
+        jPanel1.add(jLabel88, new org.netbeans.lib.awtextra.AbsoluteConstraints(622, 212, 20, 20));
 
         jLabel89.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel89MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel89, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 310, 20, 30));
+        jPanel1.add(jLabel89, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 313, 20, 20));
 
         jLabel90.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel90MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel90, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 260, 20, 30));
+        jPanel1.add(jLabel90, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 260, 20, 20));
 
         jLabel91.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel91MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel91, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 200, 20, 40));
+        jPanel1.add(jLabel91, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 212, 20, 20));
 
         jLabel92.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel92MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel92, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 310, 10, 30));
+        jPanel1.add(jLabel92, new org.netbeans.lib.awtextra.AbsoluteConstraints(696, 313, 20, 20));
 
         jLabel93.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel93MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel93, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 260, 10, 30));
+        jPanel1.add(jLabel93, new org.netbeans.lib.awtextra.AbsoluteConstraints(696, 260, 20, 20));
 
         jLabel94.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel94MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel94, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 200, 10, 40));
+        jPanel1.add(jLabel94, new org.netbeans.lib.awtextra.AbsoluteConstraints(696, 212, 20, 20));
 
         jLabel95.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel95MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel95, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 310, 20, 30));
+        jPanel1.add(jLabel95, new org.netbeans.lib.awtextra.AbsoluteConstraints(733, 313, 20, 20));
 
         jLabel96.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel96MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel96, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 260, 20, 30));
+        jPanel1.add(jLabel96, new org.netbeans.lib.awtextra.AbsoluteConstraints(733, 260, 20, 20));
 
         jLabel97.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel97MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel97, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 200, 20, 40));
+        jPanel1.add(jLabel97, new org.netbeans.lib.awtextra.AbsoluteConstraints(733, 212, 20, 20));
 
         jLabel98.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -905,77 +925,77 @@ public class UI extends javax.swing.JFrame {
                 jLabel99MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel99, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 350, 30, 10));
+        jPanel1.add(jLabel99, new org.netbeans.lib.awtextra.AbsoluteConstraints(345, 341, 20, 20));
 
         jLabel100.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel100MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel100, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 350, 20, 10));
+        jPanel1.add(jLabel100, new org.netbeans.lib.awtextra.AbsoluteConstraints(382, 341, 20, 20));
 
         jLabel101.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel101MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel101, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 350, 20, 10));
+        jPanel1.add(jLabel101, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 341, 20, 20));
 
         jLabel102.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel102MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel102, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 350, 20, 10));
+        jPanel1.add(jLabel102, new org.netbeans.lib.awtextra.AbsoluteConstraints(457, 341, 20, 20));
 
         jLabel103.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel103MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel103, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 350, 20, 10));
+        jPanel1.add(jLabel103, new org.netbeans.lib.awtextra.AbsoluteConstraints(493, 341, 20, 20));
 
         jLabel104.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel104MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel104, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 350, 20, 10));
+        jPanel1.add(jLabel104, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 341, 20, 20));
 
         jLabel105.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel105MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel105, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 350, 20, 10));
+        jPanel1.add(jLabel105, new org.netbeans.lib.awtextra.AbsoluteConstraints(568, 341, 20, 20));
 
         jLabel106.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel106MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel106, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 350, 20, 10));
+        jPanel1.add(jLabel106, new org.netbeans.lib.awtextra.AbsoluteConstraints(604, 341, 20, 20));
 
         jLabel107.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel107MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel107, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 350, 20, 10));
+        jPanel1.add(jLabel107, new org.netbeans.lib.awtextra.AbsoluteConstraints(643, 341, 20, 20));
 
         jLabel108.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel108MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel108, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 350, 20, 10));
+        jPanel1.add(jLabel108, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 341, 20, 20));
 
         jLabel109.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel109MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel109, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 350, 20, 10));
+        jPanel1.add(jLabel109, new org.netbeans.lib.awtextra.AbsoluteConstraints(714, 341, 20, 20));
         jPanel1.add(jLabel110, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 350, 20, 10));
 
         jLabel111.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -983,105 +1003,105 @@ public class UI extends javax.swing.JFrame {
                 jLabel111MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel111, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 350, 20, 10));
+        jPanel1.add(jLabel111, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 341, 20, 20));
 
         jLabel112.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel112MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel112, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 350, 10, 10));
+        jPanel1.add(jLabel112, new org.netbeans.lib.awtextra.AbsoluteConstraints(364, 341, 20, 20));
 
         jLabel113.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel113MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel113, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 350, 20, 10));
+        jPanel1.add(jLabel113, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 341, 20, 20));
 
         jLabel114.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel114MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel114, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 350, 10, 10));
+        jPanel1.add(jLabel114, new org.netbeans.lib.awtextra.AbsoluteConstraints(437, 341, 20, 20));
 
         jLabel115.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel115MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel115, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 350, 10, 10));
+        jPanel1.add(jLabel115, new org.netbeans.lib.awtextra.AbsoluteConstraints(475, 341, 20, 20));
 
         jLabel116.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel116MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel116, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 350, 10, 10));
+        jPanel1.add(jLabel116, new org.netbeans.lib.awtextra.AbsoluteConstraints(512, 341, 20, 20));
 
         jLabel117.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel117MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel117, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 350, 10, 10));
+        jPanel1.add(jLabel117, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 341, 20, 20));
 
         jLabel118.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel118MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel118, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 350, 10, 10));
+        jPanel1.add(jLabel118, new org.netbeans.lib.awtextra.AbsoluteConstraints(585, 341, 20, 20));
 
         jLabel119.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel119MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel119, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 350, 10, 10));
+        jPanel1.add(jLabel119, new org.netbeans.lib.awtextra.AbsoluteConstraints(622, 341, 20, 20));
 
         jLabel120.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel120MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel120, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 350, 10, 10));
+        jPanel1.add(jLabel120, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 341, 20, 20));
 
         jLabel121.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel121MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel121, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 350, 10, 10));
+        jPanel1.add(jLabel121, new org.netbeans.lib.awtextra.AbsoluteConstraints(696, 341, 20, 20));
 
         jLabel122.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel122MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel122, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 350, 10, 10));
+        jPanel1.add(jLabel122, new org.netbeans.lib.awtextra.AbsoluteConstraints(733, 341, 20, 20));
 
         jLabel123.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel123MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel123, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 270, 10, 10));
+        jPanel1.add(jLabel123, new org.netbeans.lib.awtextra.AbsoluteConstraints(325, 260, 20, 20));
 
         jLabel124.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel124MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel124, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 200, 10, 30));
+        jPanel1.add(jLabel124, new org.netbeans.lib.awtextra.AbsoluteConstraints(325, 212, 20, 20));
 
         jLabel125.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel125MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel125, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 240, 10, 10));
+        jPanel1.add(jLabel125, new org.netbeans.lib.awtextra.AbsoluteConstraints(325, 235, 20, 20));
 
         jLabel126.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1095,21 +1115,21 @@ public class UI extends javax.swing.JFrame {
                 jLabel127MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel127, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 280, 10, 10));
+        jPanel1.add(jLabel127, new org.netbeans.lib.awtextra.AbsoluteConstraints(325, 270, 20, 20));
 
         jLabel128.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel128MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel128, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 290, 10, 20));
+        jPanel1.add(jLabel128, new org.netbeans.lib.awtextra.AbsoluteConstraints(325, 290, 20, 20));
 
         jLabel129.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel129MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel129, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 310, 10, 40));
+        jPanel1.add(jLabel129, new org.netbeans.lib.awtextra.AbsoluteConstraints(325, 313, 20, 20));
 
         jLabel130.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1200,70 +1220,70 @@ public class UI extends javax.swing.JFrame {
                 jLabel142MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel142, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 290, 10, 20));
+        jPanel1.add(jLabel142, new org.netbeans.lib.awtextra.AbsoluteConstraints(364, 290, 20, 20));
 
         jLabel143.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel143MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel143, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 240, 10, 10));
+        jPanel1.add(jLabel143, new org.netbeans.lib.awtextra.AbsoluteConstraints(364, 235, 20, 20));
 
         jLabel144.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel144MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel144, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 290, 10, 20));
+        jPanel1.add(jLabel144, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 290, 20, 20));
 
         jLabel145.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel145MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel145, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 240, 20, 10));
+        jPanel1.add(jLabel145, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 235, 20, 20));
 
         jLabel146.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel146MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel146, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 290, 10, 20));
+        jPanel1.add(jLabel146, new org.netbeans.lib.awtextra.AbsoluteConstraints(437, 290, 20, 20));
 
         jLabel147.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel147MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel147, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 240, 10, 10));
+        jPanel1.add(jLabel147, new org.netbeans.lib.awtextra.AbsoluteConstraints(437, 235, 20, 20));
 
         jLabel148.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel148MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel148, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 290, 10, 20));
+        jPanel1.add(jLabel148, new org.netbeans.lib.awtextra.AbsoluteConstraints(475, 290, 20, 20));
 
         jLabel149.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel149MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel149, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 240, 10, 10));
+        jPanel1.add(jLabel149, new org.netbeans.lib.awtextra.AbsoluteConstraints(475, 235, 20, 20));
 
         jLabel150.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel150MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel150, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 290, 20, 20));
+        jPanel1.add(jLabel150, new org.netbeans.lib.awtextra.AbsoluteConstraints(512, 290, 20, 20));
 
         jLabel151.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel151MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel151, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 240, 10, 10));
+        jPanel1.add(jLabel151, new org.netbeans.lib.awtextra.AbsoluteConstraints(512, 235, 20, 20));
 
         jLabel152.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1277,21 +1297,21 @@ public class UI extends javax.swing.JFrame {
                 jLabel153MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel153, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 240, 20, 10));
+        jPanel1.add(jLabel153, new org.netbeans.lib.awtextra.AbsoluteConstraints(549, 235, 20, 20));
 
         jLabel154.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel154MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel154, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 290, 10, 20));
+        jPanel1.add(jLabel154, new org.netbeans.lib.awtextra.AbsoluteConstraints(585, 290, 20, 20));
 
         jLabel155.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel155MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel155, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 240, 10, 10));
+        jPanel1.add(jLabel155, new org.netbeans.lib.awtextra.AbsoluteConstraints(585, 235, 20, 20));
 
         jLabel156.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1305,7 +1325,7 @@ public class UI extends javax.swing.JFrame {
                 jLabel157MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel157, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 240, 10, 10));
+        jPanel1.add(jLabel157, new org.netbeans.lib.awtextra.AbsoluteConstraints(622, 235, 20, 20));
 
         jLabel158.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1319,35 +1339,35 @@ public class UI extends javax.swing.JFrame {
                 jLabel159MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel159, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 240, 20, 10));
+        jPanel1.add(jLabel159, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 235, 20, 20));
 
         jLabel160.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel160MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel160, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 290, 10, 20));
+        jPanel1.add(jLabel160, new org.netbeans.lib.awtextra.AbsoluteConstraints(696, 290, 20, 20));
 
         jLabel161.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel161MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel161, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 240, 10, 10));
+        jPanel1.add(jLabel161, new org.netbeans.lib.awtextra.AbsoluteConstraints(696, 235, 20, 20));
 
         jLabel162.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel162MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel162, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 290, 10, 20));
+        jPanel1.add(jLabel162, new org.netbeans.lib.awtextra.AbsoluteConstraints(733, 290, 20, 20));
 
         jLabel163.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel163MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel163, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 240, 10, 10));
+        jPanel1.add(jLabel163, new org.netbeans.lib.awtextra.AbsoluteConstraints(733, 235, 20, 20));
 
         jLabel166.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fichas1.jpg"))); // NOI18N
         jLabel166.setText("1");
@@ -1365,7 +1385,7 @@ public class UI extends javax.swing.JFrame {
                 jLabel167MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel167, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 70, 90, -1));
+        jPanel1.add(jLabel167, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 70, 90, 90));
 
         jLabel168.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fichas25.jpg"))); // NOI18N
         jLabel168.setText("25");
@@ -1374,7 +1394,14 @@ public class UI extends javax.swing.JFrame {
                 jLabel168MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel168, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 70, 90, -1));
+        jPanel1.add(jLabel168, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 70, 90, 90));
+
+        jLabel172.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel172MouseClicked(evt);
+            }
+        });
+        jPanel1.add(jLabel172, new org.netbeans.lib.awtextra.AbsoluteConstraints(604, 290, 20, 20));
 
         jLabel39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/mesa.png"))); // NOI18N
         jLabel39.setText("mesa");
@@ -1393,9 +1420,11 @@ public class UI extends javax.swing.JFrame {
         });
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 280, -1, -1));
 
+        jLabel164.setForeground(new java.awt.Color(255, 255, 255));
         jLabel164.setText("TENGO");
         jPanel1.add(jLabel164, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 50, -1, -1));
 
+        jLabel169.setForeground(new java.awt.Color(255, 255, 255));
         jLabel169.setText("BALANCE");
         jPanel1.add(jLabel169, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 50, -1, -1));
         jPanel1.add(jLabel165, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 70, 70, 30));
@@ -1685,50 +1714,47 @@ public class UI extends javax.swing.JFrame {
 
     private void jLabel64MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel64MouseClicked
         crupier.getJugador().apuestaDuo(ficha, 1, 4);
-        ponerFicha(jLabel164);
+        ponerFicha(jLabel64);
     }//GEN-LAST:event_jLabel64MouseClicked
 
     private void jLabel65MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel65MouseClicked
         crupier.getJugador().apuestaDuo(ficha, 2, 5);
-        ponerFicha(jLabel165);
+        ponerFicha(jLabel65);
     }//GEN-LAST:event_jLabel65MouseClicked
 
     private void jLabel66MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel66MouseClicked
         crupier.getJugador().apuestaDuo(ficha, 3, 6);
-        ponerFicha(jLabel166);
+        ponerFicha(jLabel66);
     }//GEN-LAST:event_jLabel66MouseClicked
 
     private void jLabel68MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel68MouseClicked
         crupier.getJugador().apuestaDuo(ficha, 4, 7);
-        ponerFicha(jLabel168);
+        ponerFicha(jLabel68);
     }//GEN-LAST:event_jLabel68MouseClicked
 
     private void jLabel69MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel69MouseClicked
         crupier.getJugador().apuestaDuo(ficha, 5, 8);
-        ponerFicha(jLabel169);
+        ponerFicha(jLabel69);
     }//GEN-LAST:event_jLabel69MouseClicked
 
     private void jLabel70MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel70MouseClicked
         crupier.getJugador().apuestaDuo(ficha, 6,9);
-        ponerFicha(jLabel170);
+        ponerFicha(jLabel70);
     }//GEN-LAST:event_jLabel70MouseClicked
 
     private void jLabel166MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel166MouseClicked
         ficha.setColor("amarillo");
         ficha.setValor(1);
-        System.out.println(ficha);
     }//GEN-LAST:event_jLabel166MouseClicked
 
     private void jLabel167MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel167MouseClicked
         ficha.setColor("verde");
         ficha.setValor(5);
-        System.out.println(ficha);
     }//GEN-LAST:event_jLabel167MouseClicked
 
     private void jLabel168MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel168MouseClicked
         ficha.setColor("rojo");
-        ficha.setValor(25);
-        System.out.println(ficha);
+        ficha.setValor(25);   
     }//GEN-LAST:event_jLabel168MouseClicked
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -1907,7 +1933,7 @@ public class UI extends javax.swing.JFrame {
 
     private void jLabel47MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel47MouseClicked
         crupier.getJugador().apuestaDuo(ficha, 11, 12);
-        ponerFicha(jLabel164);
+        ponerFicha(jLabel47);
     }//GEN-LAST:event_jLabel47MouseClicked
 
     private void jLabel48MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel48MouseClicked
@@ -2017,7 +2043,7 @@ public class UI extends javax.swing.JFrame {
 
     private void jLabel147MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel147MouseClicked
         crupier.getJugador().apuestaCuatro(ficha, 8, 9, 11, 12);
-        ponerFicha(jLabel40);
+        ponerFicha(jLabel147);
     }//GEN-LAST:event_jLabel147MouseClicked
 
     private void jLabel148MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel148MouseClicked
@@ -2278,6 +2304,11 @@ public class UI extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jLabel172MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel172MouseClicked
+        crupier.getJugador().apuestaDuo(ficha, 22, 23);
+        ponerFicha(jLabel172);
+    }//GEN-LAST:event_jLabel172MouseClicked
    
     /**
      * @param args the command line arguments
@@ -2398,6 +2429,7 @@ public class UI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel170;
     private javax.swing.JLabel jLabel171;
+    private javax.swing.JLabel jLabel172;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;

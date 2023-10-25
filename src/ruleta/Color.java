@@ -4,7 +4,6 @@
  */
 package ruleta;
 
-import java.util.ArrayList;
 
 /**
  *
@@ -28,8 +27,8 @@ public class Color extends Apuesta {
         this.color = color;
     }
 
-    public Color(String color, String nombreUsuario, ArrayList<Ficha> fichas) {
-        super(nombreUsuario, fichas);
+    public Color(String color, String nombreUsuario, Ficha ficha) {
+        super(nombreUsuario, ficha);
         this.color = color;
     }
 

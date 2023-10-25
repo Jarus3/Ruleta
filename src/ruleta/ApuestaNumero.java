@@ -4,7 +4,6 @@
  */
 package ruleta;
 
-import java.util.ArrayList;
 
 /**
  *
@@ -15,19 +14,19 @@ public class ApuestaNumero extends Apuesta {
     public ApuestaNumero(int valor){
         this.valor=valor;
         super.multiplicador=35;
-        super.fichas=new ArrayList();
+        super.ficha=new Ficha();
         super.nombreUsuario="";
     }
     public ApuestaNumero(int valor, String nombreUsuario){
         this.valor=valor;
         super.multiplicador=35;
-        super.fichas=new ArrayList();
+        super.ficha=new Ficha();
         super.nombreUsuario=nombreUsuario;
     }
-    public ApuestaNumero(int valor, String nombreUsuario,ArrayList<Ficha> fichas){
+    public ApuestaNumero(int valor, String nombreUsuario,Ficha ficha){
         this.valor=valor;
         super.multiplicador=35;
-        super.fichas=fichas;
+        super.ficha=ficha;
         super.nombreUsuario=nombreUsuario;
     }
 

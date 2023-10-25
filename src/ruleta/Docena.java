@@ -4,7 +4,6 @@
  */
 package ruleta;
 
-import java.util.ArrayList;
 
 /**
  *
@@ -32,8 +31,8 @@ public class Docena extends Apuesta {
 
     }
 
-    public Docena(int docena, String nombreUsuario, ArrayList<Ficha> fichas) {
-        super(nombreUsuario, fichas);
+    public Docena(int docena, String nombreUsuario, Ficha ficha) {
+        super(nombreUsuario, ficha);
         super.multiplicador = 2;
         this.docena = docena;
 

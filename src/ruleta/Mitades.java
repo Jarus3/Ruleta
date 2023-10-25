@@ -4,7 +4,6 @@
  */
 package ruleta;
 
-import java.util.ArrayList;
 
 /**
  *
@@ -29,8 +28,8 @@ public class Mitades extends Apuesta {
 
     }
 
-    public Mitades(boolean superior, String nombreUsuario, ArrayList<Ficha> fichas) {
-        super(nombreUsuario, fichas);
+    public Mitades(boolean superior, String nombreUsuario, Ficha ficha) {
+        super(nombreUsuario, ficha);
         this.superior = superior;
 
     }

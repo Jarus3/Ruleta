@@ -56,7 +56,10 @@ public class Usuario {
     public String getNombre() {
         return nombre;
     }
-
+    
+    public void resetApuestas(){
+        apuestas=new ArrayList<Apuesta>();
+    }
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }

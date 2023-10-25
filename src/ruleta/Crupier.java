@@ -26,7 +26,7 @@ public class Crupier {
         ganador=new Numero();
         apuestas=new ArrayList<>();
         ganadores=new ArrayList<>();
-        jugador =new Usuario();
+        jugador =new Usuario(1000);
         mesa = new Mesa();
     }
 
@@ -84,6 +84,10 @@ public class Crupier {
         this.mesa = mesa;
     }
 
+    public Numero getGanador() {
+        return ganador;
+    }
+
     @Override
     public String toString() {
         return "Crupier [Jugador: " + jugador + ", Mesa: " + mesa + "]";
@@ -91,16 +95,18 @@ public class Crupier {
 
     public void getApuestas(){
         apuestas=jugador.getApuestas();
+        jugador.resetApuestas();
     }
     public void ganadores(){
         ganador=mesa.getGanador();
         Apuesta aux;
         int premio=0;
-        for(int i=0;i<apuestas.size();){
+        for(int i=0;i<apuestas.size();i++){
             aux=apuestas.get(i);
             if(gano(aux,ganador)){
                 premio=(int)aux.getMultiplicador()*aux.getFichas().getValor();
                 jugador.addDinero(premio);
+                jugador.addFicha(aux.getFichas());
             }
         }
     }
@@ -204,4 +210,5 @@ public class Crupier {
             return null;
         }
     }
+
 }

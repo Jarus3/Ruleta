@@ -45,5 +45,10 @@ public class Apuesta {
         return multiplicador;
     }
     
-    
+    @Override
+    public String toString(){
+        String salida;
+        salida=""+ficha.getValor()+" "+multiplicador;
+        return salida;
+    }
 }

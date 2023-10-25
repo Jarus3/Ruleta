@@ -24,8 +24,18 @@ public class UI extends javax.swing.JFrame {
         initComponents();
         ficha = new Ficha(1,"amarillo");
         crupier = new Crupier();
+        jLabel170.setBackground(Color.CYAN);
+        jLabel170.setOpaque(true);
+        jLabel170.setText(""+crupier.getJugador().getDinero());
     }
 
+    private void ponerFicha(JLabel etiqueta){
+        etiqueta.setOpaque(true);
+        ImageIcon nuevaImagen = new ImageIcon(getClass().getResource("/imagenes/ficha1.png"));
+        etiqueta.setIcon(nuevaImagen);
+        etiqueta.repaint();
+        jLabel170.setText(""+crupier.getJugador().getDinero());
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -205,6 +215,10 @@ public class UI extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jLabel164 = new javax.swing.JLabel();
         jLabel169 = new javax.swing.JLabel();
+        jLabel165 = new javax.swing.JLabel();
+        jLabel170 = new javax.swing.JLabel();
+        jLabel171 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -1366,18 +1380,43 @@ public class UI extends javax.swing.JFrame {
         jPanel1.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 160, 650, -1));
 
         jButton1.setText("GIRAR");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 330, -1, -1));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 280, -1, -1));
 
         jLabel164.setText("TENGO");
         jPanel1.add(jLabel164, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 50, -1, -1));
 
         jLabel169.setText("BALANCE");
         jPanel1.add(jLabel169, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 50, -1, -1));
+        jPanel1.add(jLabel165, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 70, 70, 30));
+        jLabel165.getAccessibleContext().setAccessibleName("balance");
+
+        jLabel170.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jPanel1.add(jLabel170, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 70, 70, 30));
+        jLabel170.getAccessibleContext().setAccessibleName("dinero");
+
+        jLabel171.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel171.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jPanel1.add(jLabel171, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 110, 80, 40));
+        jLabel171.getAccessibleContext().setAccessibleName("mostrar");
+        jLabel171.getAccessibleContext().setAccessibleDescription("");
+
+        jButton2.setText("Volver a Apostar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 400, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -1395,230 +1434,282 @@ public class UI extends javax.swing.JFrame {
 
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
         crupier.getJugador().apuestaNumero(ficha, 1);
-        jLabel1.setOpaque(true);
-        ImageIcon nuevaImagen = new ImageIcon(getClass().getResource("/imagenes/ficha1.png"));
-        jLabel1.setIcon(nuevaImagen);
-        jLabel1.repaint();
+        ponerFicha(jLabel1);
     }//GEN-LAST:event_jLabel1MouseClicked
 
     private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
         crupier.getJugador().apuestaNumero(ficha, 2);
+        ponerFicha(jLabel2);
     }//GEN-LAST:event_jLabel2MouseClicked
 
     private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
         crupier.getJugador().apuestaNumero(ficha, 3);
+        ponerFicha(jLabel3);
     }//GEN-LAST:event_jLabel3MouseClicked
 
     private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
         crupier.getJugador().apuestaNumero(ficha, 4);
+        ponerFicha(jLabel4);
     }//GEN-LAST:event_jLabel4MouseClicked
 
     private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
         crupier.getJugador().apuestaNumero(ficha, 5);
+        ponerFicha(jLabel5);
     }//GEN-LAST:event_jLabel5MouseClicked
 
     private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
         crupier.getJugador().apuestaNumero(ficha, 6);
+        ponerFicha(jLabel6);
     }//GEN-LAST:event_jLabel6MouseClicked
 
     private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
         crupier.getJugador().apuestaNumero(ficha, 7);
+        ponerFicha(jLabel7);
     }//GEN-LAST:event_jLabel7MouseClicked
 
     private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
         crupier.getJugador().apuestaNumero(ficha, 8);
+        ponerFicha(jLabel8);
     }//GEN-LAST:event_jLabel8MouseClicked
 
     private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
         crupier.getJugador().apuestaNumero(ficha, 9);
+        ponerFicha(jLabel9);
     }//GEN-LAST:event_jLabel9MouseClicked
 
     private void jLabel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseClicked
         crupier.getJugador().apuestaNumero(ficha, 10);
+        ponerFicha(jLabel10);
     }//GEN-LAST:event_jLabel10MouseClicked
 
     private void jLabel11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MouseClicked
         crupier.getJugador().apuestaNumero(ficha, 11);
+        ponerFicha(jLabel11);
     }//GEN-LAST:event_jLabel11MouseClicked
 
     private void jLabel12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel12MouseClicked
         crupier.getJugador().apuestaNumero(ficha, 12);
+        ponerFicha(jLabel12);
     }//GEN-LAST:event_jLabel12MouseClicked
 
     private void jLabel13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel13MouseClicked
         crupier.getJugador().apuestaNumero(ficha, 13);
+        ponerFicha(jLabel13);
     }//GEN-LAST:event_jLabel13MouseClicked
 
     private void jLabel14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel14MouseClicked
         crupier.getJugador().apuestaNumero(ficha, 14);
+        ponerFicha(jLabel14);
     }//GEN-LAST:event_jLabel14MouseClicked
 
     private void jLabel15MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel15MouseClicked
         crupier.getJugador().apuestaNumero(ficha, 15);
+        ponerFicha(jLabel15);
     }//GEN-LAST:event_jLabel15MouseClicked
 
     private void jLabel16MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel16MouseClicked
         crupier.getJugador().apuestaNumero(ficha, 16);
+        ponerFicha(jLabel16);
     }//GEN-LAST:event_jLabel16MouseClicked
 
     private void jLabel17MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel17MouseClicked
         crupier.getJugador().apuestaNumero(ficha, 17);
+        ponerFicha(jLabel17);
     }//GEN-LAST:event_jLabel17MouseClicked
 
     private void jLabel18MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel18MouseClicked
         crupier.getJugador().apuestaNumero(ficha, 18);
+        ponerFicha(jLabel18);
     }//GEN-LAST:event_jLabel18MouseClicked
 
     private void jLabel19MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel19MouseClicked
         crupier.getJugador().apuestaNumero(ficha,19);
+        ponerFicha(jLabel9);
     }//GEN-LAST:event_jLabel19MouseClicked
 
     private void jLabel20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel20MouseClicked
         crupier.getJugador().apuestaNumero(ficha, 20);
+        ponerFicha(jLabel20);
     }//GEN-LAST:event_jLabel20MouseClicked
 
     private void jLabel21MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel21MouseClicked
         crupier.getJugador().apuestaNumero(ficha, 21);
+        ponerFicha(jLabel21);
     }//GEN-LAST:event_jLabel21MouseClicked
 
     private void jLabel22MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel22MouseClicked
         crupier.getJugador().apuestaNumero(ficha, 22);
+        ponerFicha(jLabel22);
     }//GEN-LAST:event_jLabel22MouseClicked
 
     private void jLabel23MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel23MouseClicked
         crupier.getJugador().apuestaNumero(ficha, 23);
+        ponerFicha(jLabel23);
     }//GEN-LAST:event_jLabel23MouseClicked
 
     private void jLabel24MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel24MouseClicked
         crupier.getJugador().apuestaNumero(ficha, 24);
+        ponerFicha(jLabel24);
     }//GEN-LAST:event_jLabel24MouseClicked
 
     private void jLabel25MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel25MouseClicked
         crupier.getJugador().apuestaNumero(ficha, 25);
+        ponerFicha(jLabel25);
     }//GEN-LAST:event_jLabel25MouseClicked
 
     private void jLabel26MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel26MouseClicked
         crupier.getJugador().apuestaNumero(ficha, 26);
+        ponerFicha(jLabel1);
     }//GEN-LAST:event_jLabel26MouseClicked
 
     private void jLabel27MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel27MouseClicked
         crupier.getJugador().apuestaNumero(ficha, 27);
+        ponerFicha(jLabel127);
     }//GEN-LAST:event_jLabel27MouseClicked
 
     private void jLabel28MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel28MouseClicked
         crupier.getJugador().apuestaNumero(ficha, 28);
+        ponerFicha(jLabel28);
     }//GEN-LAST:event_jLabel28MouseClicked
 
     private void jLabel29MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel29MouseClicked
         crupier.getJugador().apuestaNumero(ficha, 29);
+        ponerFicha(jLabel29);
     }//GEN-LAST:event_jLabel29MouseClicked
 
     private void jLabel30MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel30MouseClicked
         crupier.getJugador().apuestaNumero(ficha, 30);
+        ponerFicha(jLabel30);
     }//GEN-LAST:event_jLabel30MouseClicked
 
     private void jLabel31MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel31MouseClicked
         crupier.getJugador().apuestaNumero(ficha, 31);
+        ponerFicha(jLabel31);
     }//GEN-LAST:event_jLabel31MouseClicked
 
     private void jLabel32MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel32MouseClicked
         crupier.getJugador().apuestaNumero(ficha, 32);
+        ponerFicha(jLabel32);
     }//GEN-LAST:event_jLabel32MouseClicked
 
     private void jLabel33MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel33MouseClicked
         crupier.getJugador().apuestaNumero(ficha, 33);
+        ponerFicha(jLabel33);
     }//GEN-LAST:event_jLabel33MouseClicked
 
     private void jLabel34MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel34MouseClicked
         crupier.getJugador().apuestaNumero(ficha, 34);
+        ponerFicha(jLabel34);
     }//GEN-LAST:event_jLabel34MouseClicked
 
     private void jLabel35MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel35MouseClicked
         crupier.getJugador().apuestaNumero(ficha, 35);
+        ponerFicha(jLabel35);
     }//GEN-LAST:event_jLabel35MouseClicked
 
     private void jLabel36MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel36MouseClicked
         crupier.getJugador().apuestaNumero(ficha, 36);
+        ponerFicha(jLabel36);
     }//GEN-LAST:event_jLabel36MouseClicked
 
     private void jLabel37MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel37MouseClicked
         crupier.getJugador().apuestaNumero(ficha, 37);
+        ponerFicha(jLabel37);
     }//GEN-LAST:event_jLabel37MouseClicked
 
     private void jLabel38MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel38MouseClicked
         crupier.getJugador().apuestaNumero(ficha, 38);
+        ponerFicha(jLabel38);
     }//GEN-LAST:event_jLabel38MouseClicked
 
     private void jLabel130MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel130MouseClicked
         crupier.getJugador().apuestaColumna(ficha, 1);
+        ponerFicha(jLabel130);
     }//GEN-LAST:event_jLabel130MouseClicked
 
     private void jLabel131MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel131MouseClicked
         crupier.getJugador().apuestaColumna(ficha, 2);
+        ponerFicha(jLabel131);
     }//GEN-LAST:event_jLabel131MouseClicked
 
     private void jLabel132MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel132MouseClicked
         crupier.getJugador().apuestaColumna(ficha, 3);
+        ponerFicha(jLabel132);
     }//GEN-LAST:event_jLabel132MouseClicked
 
     private void jLabel133MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel133MouseClicked
         crupier.getJugador().apuestaDocena(ficha, 1);
+        ponerFicha(jLabel133);
     }//GEN-LAST:event_jLabel133MouseClicked
 
     private void jLabel134MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel134MouseClicked
         crupier.getJugador().apuestaDocena(ficha, 2);
+        ponerFicha(jLabel134);
     }//GEN-LAST:event_jLabel134MouseClicked
 
     private void jLabel135MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel135MouseClicked
         crupier.getJugador().apuestaDocena(ficha, 3);
+        ponerFicha(jLabel135);
     }//GEN-LAST:event_jLabel135MouseClicked
 
     private void jLabel136MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel136MouseClicked
         crupier.getJugador().apuestaMitades(ficha, true);
+        ponerFicha(jLabel136);
     }//GEN-LAST:event_jLabel136MouseClicked
 
     private void jLabel137MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel137MouseClicked
         crupier.getJugador().apuestaParidad(ficha, true);
+        ponerFicha(jLabel137);
     }//GEN-LAST:event_jLabel137MouseClicked
 
     private void jLabel138MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel138MouseClicked
         crupier.getJugador().apuestaColor(ficha, "red");
+        ponerFicha(jLabel138);
     }//GEN-LAST:event_jLabel138MouseClicked
 
     private void jLabel139MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel139MouseClicked
         crupier.getJugador().apuestaColor(ficha, "black");
+        ponerFicha(jLabel139);
     }//GEN-LAST:event_jLabel139MouseClicked
 
     private void jLabel140MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel140MouseClicked
         crupier.getJugador().apuestaParidad(ficha, false);
+        ponerFicha(jLabel140);
     }//GEN-LAST:event_jLabel140MouseClicked
 
     private void jLabel141MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel141MouseClicked
         crupier.getJugador().apuestaMitades(ficha, false);
+        ponerFicha(jLabel141);
     }//GEN-LAST:event_jLabel141MouseClicked
 
     private void jLabel64MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel64MouseClicked
         crupier.getJugador().apuestaDuo(ficha, 1, 4);
+        ponerFicha(jLabel164);
     }//GEN-LAST:event_jLabel64MouseClicked
 
     private void jLabel65MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel65MouseClicked
         crupier.getJugador().apuestaDuo(ficha, 2, 5);
+        ponerFicha(jLabel165);
     }//GEN-LAST:event_jLabel65MouseClicked
 
     private void jLabel66MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel66MouseClicked
         crupier.getJugador().apuestaDuo(ficha, 3, 6);
+        ponerFicha(jLabel166);
     }//GEN-LAST:event_jLabel66MouseClicked
 
     private void jLabel68MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel68MouseClicked
         crupier.getJugador().apuestaDuo(ficha, 4, 7);
+        ponerFicha(jLabel168);
     }//GEN-LAST:event_jLabel68MouseClicked
 
     private void jLabel69MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel69MouseClicked
         crupier.getJugador().apuestaDuo(ficha, 5, 8);
+        ponerFicha(jLabel169);
     }//GEN-LAST:event_jLabel69MouseClicked
 
     private void jLabel70MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel70MouseClicked
         crupier.getJugador().apuestaDuo(ficha, 6,9);
+        ponerFicha(jLabel170);
     }//GEN-LAST:event_jLabel70MouseClicked
 
     private void jLabel166MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel166MouseClicked
@@ -1645,419 +1736,547 @@ public class UI extends javax.swing.JFrame {
 
     private void jLabel71MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel71MouseClicked
         crupier.getJugador().apuestaDuo(ficha, 7, 10);
+        ponerFicha(jLabel71);
     }//GEN-LAST:event_jLabel71MouseClicked
 
     private void jLabel72MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel72MouseClicked
         crupier.getJugador().apuestaDuo(ficha, 8, 11);
+        ponerFicha(jLabel72);
     }//GEN-LAST:event_jLabel72MouseClicked
 
     private void jLabel73MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel73MouseClicked
         crupier.getJugador().apuestaDuo(ficha, 9, 12);
+        ponerFicha(jLabel73);
     }//GEN-LAST:event_jLabel73MouseClicked
 
     private void jLabel74MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel74MouseClicked
         crupier.getJugador().apuestaDuo(ficha, 10, 13);
+        ponerFicha(jLabel74);
     }//GEN-LAST:event_jLabel74MouseClicked
 
     private void jLabel75MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel75MouseClicked
         crupier.getJugador().apuestaDuo(ficha, 11, 14);
+        ponerFicha(jLabel75);
     }//GEN-LAST:event_jLabel75MouseClicked
 
     private void jLabel76MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel76MouseClicked
         crupier.getJugador().apuestaDuo(ficha, 12, 15);
+        ponerFicha(jLabel76);
     }//GEN-LAST:event_jLabel76MouseClicked
 
     private void jLabel77MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel77MouseClicked
         crupier.getJugador().apuestaDuo(ficha, 13, 16);
+        ponerFicha(jLabel77);
     }//GEN-LAST:event_jLabel77MouseClicked
 
     private void jLabel78MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel78MouseClicked
         crupier.getJugador().apuestaDuo(ficha, 14, 17);
+        ponerFicha(jLabel78);
     }//GEN-LAST:event_jLabel78MouseClicked
 
     private void jLabel79MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel79MouseClicked
-        crupier.getJugador().apuestaDuo(ficha, 15, 18);
+        crupier.getJugador().apuestaDuo(ficha, 15, 18);;
+        ponerFicha(jLabel79);
     }//GEN-LAST:event_jLabel79MouseClicked
 
     private void jLabel80MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel80MouseClicked
        crupier.getJugador().apuestaDuo(ficha, 16, 19);
+       ponerFicha(jLabel80);
     }//GEN-LAST:event_jLabel80MouseClicked
 
     private void jLabel81MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel81MouseClicked
-        crupier.getJugador().apuestaDuo(ficha, 17, 20);
+        crupier.getJugador().apuestaDuo(ficha, 17, 20);;
+        ponerFicha(jLabel81);
     }//GEN-LAST:event_jLabel81MouseClicked
 
     private void jLabel82MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel82MouseClicked
         crupier.getJugador().apuestaDuo(ficha, 18, 21);
+        ponerFicha(jLabel82);
     }//GEN-LAST:event_jLabel82MouseClicked
 
     private void jLabel83MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel83MouseClicked
-        crupier.getJugador().apuestaDuo(ficha, 19, 22);
+        crupier.getJugador().apuestaDuo(ficha, 19, 22);;
+        ponerFicha(jLabel83);
     }//GEN-LAST:event_jLabel83MouseClicked
 
     private void jLabel84MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel84MouseClicked
         crupier.getJugador().apuestaDuo(ficha, 20, 23);
+        ponerFicha(jLabel84);
     }//GEN-LAST:event_jLabel84MouseClicked
 
     private void jLabel85MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel85MouseClicked
-        crupier.getJugador().apuestaDuo(ficha, 21, 24); 
+        crupier.getJugador().apuestaDuo(ficha, 21, 24);
+        ponerFicha(jLabel85); 
     }//GEN-LAST:event_jLabel85MouseClicked
 
     private void jLabel86MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel86MouseClicked
-        crupier.getJugador().apuestaDuo(ficha, 22, 25);
+        crupier.getJugador().apuestaDuo(ficha, 22, 25);;
+        ponerFicha(jLabel86);
     }//GEN-LAST:event_jLabel86MouseClicked
 
     private void jLabel87MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel87MouseClicked
         crupier.getJugador().apuestaDuo(ficha, 23, 26);
+        ponerFicha(jLabel87);
     }//GEN-LAST:event_jLabel87MouseClicked
 
     private void jLabel88MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel88MouseClicked
-        crupier.getJugador().apuestaDuo(ficha, 24, 27);
+        crupier.getJugador().apuestaDuo(ficha, 24, 27);;
+        ponerFicha(jLabel88);
     }//GEN-LAST:event_jLabel88MouseClicked
 
     private void jLabel89MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel89MouseClicked
         crupier.getJugador().apuestaDuo(ficha, 25, 28);
+        ponerFicha(jLabel89);
     }//GEN-LAST:event_jLabel89MouseClicked
 
     private void jLabel90MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel90MouseClicked
-        crupier.getJugador().apuestaDuo(ficha, 26, 29);
+        crupier.getJugador().apuestaDuo(ficha, 26, 29);;
+        ponerFicha(jLabel90);
     }//GEN-LAST:event_jLabel90MouseClicked
 
     private void jLabel91MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel91MouseClicked
         crupier.getJugador().apuestaDuo(ficha, 27, 30);
+        ponerFicha(jLabel91);
     }//GEN-LAST:event_jLabel91MouseClicked
 
     private void jLabel92MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel92MouseClicked
         crupier.getJugador().apuestaDuo(ficha, 28, 31);
+        ponerFicha(jLabel92);
     }//GEN-LAST:event_jLabel92MouseClicked
 
     private void jLabel93MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel93MouseClicked
-        crupier.getJugador().apuestaDuo(ficha, 29, 32);
+        crupier.getJugador().apuestaDuo(ficha, 29, 32);;
+        ponerFicha(jLabel93);
     }//GEN-LAST:event_jLabel93MouseClicked
 
     private void jLabel94MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel94MouseClicked
         crupier.getJugador().apuestaDuo(ficha, 30, 33);
+        ponerFicha(jLabel94);
     }//GEN-LAST:event_jLabel94MouseClicked
 
     private void jLabel95MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel95MouseClicked
         crupier.getJugador().apuestaDuo(ficha, 31, 34);
+        ponerFicha(jLabel95);
     }//GEN-LAST:event_jLabel95MouseClicked
 
     private void jLabel96MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel96MouseClicked
         crupier.getJugador().apuestaDuo(ficha, 32, 35);
+        ponerFicha(jLabel96);
     }//GEN-LAST:event_jLabel96MouseClicked
 
     private void jLabel97MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel97MouseClicked
         crupier.getJugador().apuestaDuo(ficha, 33, 36);
+        ponerFicha(jLabel97);
     }//GEN-LAST:event_jLabel97MouseClicked
 
     private void jLabel40MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel40MouseClicked
         crupier.getJugador().apuestaDuo(ficha, 1, 2);
+        ponerFicha(jLabel40);
     }//GEN-LAST:event_jLabel40MouseClicked
 
     private void jLabel41MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel41MouseClicked
         crupier.getJugador().apuestaDuo(ficha, 2, 3);
+        ponerFicha(jLabel41);
     }//GEN-LAST:event_jLabel41MouseClicked
 
     private void jLabel42MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel42MouseClicked
         crupier.getJugador().apuestaDuo(ficha, 4, 5);
+        ponerFicha(jLabel42);
     }//GEN-LAST:event_jLabel42MouseClicked
 
     private void jLabel43MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel43MouseClicked
         crupier.getJugador().apuestaDuo(ficha, 5, 6);
+        ponerFicha(jLabel43);
     }//GEN-LAST:event_jLabel43MouseClicked
 
     private void jLabel44MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel44MouseClicked
         crupier.getJugador().apuestaDuo(ficha, 7, 8);
+        ponerFicha(jLabel44);
     }//GEN-LAST:event_jLabel44MouseClicked
 
     private void jLabel45MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel45MouseClicked
         crupier.getJugador().apuestaDuo(ficha, 8, 9);
+        ponerFicha(jLabel45);
     }//GEN-LAST:event_jLabel45MouseClicked
 
     private void jLabel46MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel46MouseClicked
         crupier.getJugador().apuestaDuo(ficha, 10, 11);
+        ponerFicha(jLabel46);
     }//GEN-LAST:event_jLabel46MouseClicked
 
     private void jLabel47MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel47MouseClicked
         crupier.getJugador().apuestaDuo(ficha, 11, 12);
+        ponerFicha(jLabel164);
     }//GEN-LAST:event_jLabel47MouseClicked
 
     private void jLabel48MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel48MouseClicked
         crupier.getJugador().apuestaDuo(ficha, 13, 14);
+        ponerFicha(jLabel48);
     }//GEN-LAST:event_jLabel48MouseClicked
 
     private void jLabel49MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel49MouseClicked
         crupier.getJugador().apuestaDuo(ficha, 14, 15);
+        ponerFicha(jLabel49);
     }//GEN-LAST:event_jLabel49MouseClicked
 
     private void jLabel50MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel50MouseClicked
         crupier.getJugador().apuestaDuo(ficha, 16, 17);
+        ponerFicha(jLabel50);
     }//GEN-LAST:event_jLabel50MouseClicked
 
     private void jLabel51MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel51MouseClicked
         crupier.getJugador().apuestaDuo(ficha, 17, 18);
+        ponerFicha(jLabel51);
     }//GEN-LAST:event_jLabel51MouseClicked
 
     private void jLabel52MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel52MouseClicked
         crupier.getJugador().apuestaDuo(ficha, 19, 20);
+        ponerFicha(jLabel52);
     }//GEN-LAST:event_jLabel52MouseClicked
 
     private void jLabel53MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel53MouseClicked
         crupier.getJugador().apuestaDuo(ficha, 20, 21);
+        ponerFicha(jLabel53);
     }//GEN-LAST:event_jLabel53MouseClicked
 
     private void jLabel54MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel54MouseClicked
         crupier.getJugador().apuestaDuo(ficha, 22, 23);
+        ponerFicha(jLabel54);
     }//GEN-LAST:event_jLabel54MouseClicked
 
     private void jLabel55MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel55MouseClicked
         crupier.getJugador().apuestaDuo(ficha, 23, 24);
+        ponerFicha(jLabel55);
     }//GEN-LAST:event_jLabel55MouseClicked
 
     private void jLabel56MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel56MouseClicked
         crupier.getJugador().apuestaDuo(ficha, 25, 26);
+        ponerFicha(jLabel56);
     }//GEN-LAST:event_jLabel56MouseClicked
 
     private void jLabel57MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel57MouseClicked
         crupier.getJugador().apuestaDuo(ficha, 26, 27);
+        ponerFicha(jLabel57);
     }//GEN-LAST:event_jLabel57MouseClicked
 
     private void jLabel58MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel58MouseClicked
         crupier.getJugador().apuestaDuo(ficha, 28, 29);
+        ponerFicha(jLabel58);
     }//GEN-LAST:event_jLabel58MouseClicked
 
     private void jLabel59MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel59MouseClicked
         crupier.getJugador().apuestaDuo(ficha, 29, 30);
+        ponerFicha(jLabel59);
     }//GEN-LAST:event_jLabel59MouseClicked
 
     private void jLabel60MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel60MouseClicked
         crupier.getJugador().apuestaDuo(ficha, 31, 32);
+        ponerFicha(jLabel60);
     }//GEN-LAST:event_jLabel60MouseClicked
 
     private void jLabel61MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel61MouseClicked
         crupier.getJugador().apuestaDuo(ficha, 32, 33);
+        ponerFicha(jLabel61);
     }//GEN-LAST:event_jLabel61MouseClicked
 
     private void jLabel62MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel62MouseClicked
         crupier.getJugador().apuestaDuo(ficha, 34, 35);
+        ponerFicha(jLabel62);
     }//GEN-LAST:event_jLabel62MouseClicked
 
     private void jLabel63MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel63MouseClicked
         crupier.getJugador().apuestaDuo(ficha, 35, 36);
+        ponerFicha(jLabel63);
     }//GEN-LAST:event_jLabel63MouseClicked
 
     private void jLabel142MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel142MouseClicked
         crupier.getJugador().apuestaCuatro(ficha, 1, 2, 4, 5);
+        ponerFicha(jLabel142);
     }//GEN-LAST:event_jLabel142MouseClicked
 
     private void jLabel143MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel143MouseClicked
         crupier.getJugador().apuestaCuatro(ficha, 2, 3, 5, 6);
+        ponerFicha(jLabel143);
     }//GEN-LAST:event_jLabel143MouseClicked
 
     private void jLabel144MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel144MouseClicked
         crupier.getJugador().apuestaCuatro(ficha, 4, 5, 7, 8);
+        ponerFicha(jLabel144);
     }//GEN-LAST:event_jLabel144MouseClicked
 
     private void jLabel145MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel145MouseClicked
         crupier.getJugador().apuestaCuatro(ficha, 5, 6, 8, 9);
+        ponerFicha(jLabel145);
     }//GEN-LAST:event_jLabel145MouseClicked
 
     private void jLabel146MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel146MouseClicked
         crupier.getJugador().apuestaCuatro(ficha, 7, 8, 10, 11);
+        ponerFicha(jLabel146);
     }//GEN-LAST:event_jLabel146MouseClicked
 
     private void jLabel147MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel147MouseClicked
         crupier.getJugador().apuestaCuatro(ficha, 8, 9, 11, 12);
+        ponerFicha(jLabel40);
     }//GEN-LAST:event_jLabel147MouseClicked
 
     private void jLabel148MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel148MouseClicked
         crupier.getJugador().apuestaCuatro(ficha, 10, 11, 13, 14);
+        ponerFicha(jLabel148);
     }//GEN-LAST:event_jLabel148MouseClicked
 
     private void jLabel149MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel149MouseClicked
         crupier.getJugador().apuestaCuatro(ficha, 11, 12, 14, 15);
+        ponerFicha(jLabel149);
     }//GEN-LAST:event_jLabel149MouseClicked
 
     private void jLabel150MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel150MouseClicked
         crupier.getJugador().apuestaCuatro(ficha, 13, 14, 16, 17);
+        ponerFicha(jLabel150);
     }//GEN-LAST:event_jLabel150MouseClicked
 
     private void jLabel151MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel151MouseClicked
         crupier.getJugador().apuestaCuatro(ficha, 14, 15, 17, 18);
+        ponerFicha(jLabel151);
     }//GEN-LAST:event_jLabel151MouseClicked
 
     private void jLabel152MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel152MouseClicked
         crupier.getJugador().apuestaCuatro(ficha, 16, 17, 19, 20);
+        ponerFicha(jLabel152);
     }//GEN-LAST:event_jLabel152MouseClicked
 
     private void jLabel153MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel153MouseClicked
         crupier.getJugador().apuestaCuatro(ficha, 17, 18, 20, 21);
+        ponerFicha(jLabel153);
     }//GEN-LAST:event_jLabel153MouseClicked
 
     private void jLabel154MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel154MouseClicked
         crupier.getJugador().apuestaCuatro(ficha, 19, 20, 22, 23);
+        ponerFicha(jLabel154);
     }//GEN-LAST:event_jLabel154MouseClicked
 
     private void jLabel155MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel155MouseClicked
         crupier.getJugador().apuestaCuatro(ficha, 20, 21, 23, 24);
+        ponerFicha(jLabel155);
     }//GEN-LAST:event_jLabel155MouseClicked
 
     private void jLabel156MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel156MouseClicked
         crupier.getJugador().apuestaCuatro(ficha, 22, 23, 25, 26);
+        ponerFicha(jLabel156);
     }//GEN-LAST:event_jLabel156MouseClicked
 
     private void jLabel157MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel157MouseClicked
         crupier.getJugador().apuestaCuatro(ficha, 23, 24, 26, 27);
+        ponerFicha(jLabel157);
     }//GEN-LAST:event_jLabel157MouseClicked
 
     private void jLabel158MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel158MouseClicked
         crupier.getJugador().apuestaCuatro(ficha, 25, 26, 28, 29);
+        ponerFicha(jLabel158);
     }//GEN-LAST:event_jLabel158MouseClicked
 
     private void jLabel159MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel159MouseClicked
         crupier.getJugador().apuestaCuatro(ficha, 26, 27, 29, 30);
+        ponerFicha(jLabel159);
     }//GEN-LAST:event_jLabel159MouseClicked
 
     private void jLabel160MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel160MouseClicked
         crupier.getJugador().apuestaCuatro(ficha, 28, 29, 31, 32);
+        ponerFicha(jLabel160);
     }//GEN-LAST:event_jLabel160MouseClicked
 
     private void jLabel161MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel161MouseClicked
         crupier.getJugador().apuestaCuatro(ficha, 29, 30, 32, 33);
+        ponerFicha(jLabel161);
     }//GEN-LAST:event_jLabel161MouseClicked
 
     private void jLabel162MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel162MouseClicked
         crupier.getJugador().apuestaCuatro(ficha, 31, 32, 34, 35);
+        ponerFicha(jLabel162);
     }//GEN-LAST:event_jLabel162MouseClicked
 
     private void jLabel163MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel163MouseClicked
         crupier.getJugador().apuestaCuatro(ficha, 32, 33, 35, 36);
+        ponerFicha(jLabel163);
     }//GEN-LAST:event_jLabel163MouseClicked
 
     private void jLabel99MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel99MouseClicked
         crupier.getJugador().apuestaTrio(ficha,1,2,3);
+        ponerFicha(jLabel99);
     }//GEN-LAST:event_jLabel99MouseClicked
 
     private void jLabel100MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel100MouseClicked
         crupier.getJugador().apuestaTrio(ficha,4,5,6);
+        ponerFicha(jLabel100);
     }//GEN-LAST:event_jLabel100MouseClicked
 
     private void jLabel101MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel101MouseClicked
         crupier.getJugador().apuestaTrio(ficha,7,8,9);
+        ponerFicha(jLabel101);
     }//GEN-LAST:event_jLabel101MouseClicked
 
     private void jLabel102MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel102MouseClicked
         crupier.getJugador().apuestaTrio(ficha,10,11,12);
+        ponerFicha(jLabel102);
     }//GEN-LAST:event_jLabel102MouseClicked
 
     private void jLabel103MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel103MouseClicked
         crupier.getJugador().apuestaTrio(ficha,13,14,15);
+        ponerFicha(jLabel103);
     }//GEN-LAST:event_jLabel103MouseClicked
 
     private void jLabel104MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel104MouseClicked
         crupier.getJugador().apuestaTrio(ficha,16,17,18);
+        ponerFicha(jLabel104);
     }//GEN-LAST:event_jLabel104MouseClicked
 
     private void jLabel105MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel105MouseClicked
         crupier.getJugador().apuestaTrio(ficha,19,20,21);
+        ponerFicha(jLabel105);
     }//GEN-LAST:event_jLabel105MouseClicked
 
     private void jLabel106MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel106MouseClicked
         crupier.getJugador().apuestaTrio(ficha,22,23,24);
+        ponerFicha(jLabel106);
     }//GEN-LAST:event_jLabel106MouseClicked
 
     private void jLabel107MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel107MouseClicked
         crupier.getJugador().apuestaTrio(ficha,25,26,27);
+        ponerFicha(jLabel107);
     }//GEN-LAST:event_jLabel107MouseClicked
 
     private void jLabel108MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel108MouseClicked
         crupier.getJugador().apuestaTrio(ficha,28,29,30);
+        ponerFicha(jLabel108);
     }//GEN-LAST:event_jLabel108MouseClicked
 
     private void jLabel109MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel109MouseClicked
         crupier.getJugador().apuestaTrio(ficha,31,32,33);
+        ponerFicha(jLabel109);
     }//GEN-LAST:event_jLabel109MouseClicked
 
     private void jLabel111MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel111MouseClicked
         crupier.getJugador().apuestaTrio(ficha,34,35,36);
+        ponerFicha(jLabel111);
     }//GEN-LAST:event_jLabel111MouseClicked
 
     private void jLabel112MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel112MouseClicked
         crupier.getJugador().apuestaDobleLinea(ficha, 1,2);
+        ponerFicha(jLabel112);
     }//GEN-LAST:event_jLabel112MouseClicked
 
     private void jLabel113MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel113MouseClicked
         crupier.getJugador().apuestaDobleLinea(ficha, 2,3);
+        ponerFicha(jLabel113);
     }//GEN-LAST:event_jLabel113MouseClicked
 
     private void jLabel114MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel114MouseClicked
         crupier.getJugador().apuestaDobleLinea(ficha, 3,4);
+        ponerFicha(jLabel114);
     }//GEN-LAST:event_jLabel114MouseClicked
 
     private void jLabel115MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel115MouseClicked
         crupier.getJugador().apuestaDobleLinea(ficha, 4,5);
+        ponerFicha(jLabel115);
     }//GEN-LAST:event_jLabel115MouseClicked
 
     private void jLabel116MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel116MouseClicked
         crupier.getJugador().apuestaDobleLinea(ficha, 5,6);
+        ponerFicha(jLabel116);
     }//GEN-LAST:event_jLabel116MouseClicked
 
     private void jLabel117MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel117MouseClicked
         crupier.getJugador().apuestaDobleLinea(ficha, 6,7);
+        ponerFicha(jLabel117);
     }//GEN-LAST:event_jLabel117MouseClicked
 
     private void jLabel118MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel118MouseClicked
         crupier.getJugador().apuestaDobleLinea(ficha, 7,8);
+        ponerFicha(jLabel118);
     }//GEN-LAST:event_jLabel118MouseClicked
 
     private void jLabel119MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel119MouseClicked
         crupier.getJugador().apuestaDobleLinea(ficha, 8,9);
+        ponerFicha(jLabel119);
     }//GEN-LAST:event_jLabel119MouseClicked
 
     private void jLabel120MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel120MouseClicked
         crupier.getJugador().apuestaDobleLinea(ficha, 9,10);
+        ponerFicha(jLabel120);
     }//GEN-LAST:event_jLabel120MouseClicked
 
     private void jLabel121MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel121MouseClicked
         crupier.getJugador().apuestaDobleLinea(ficha, 10,11);
+        ponerFicha(jLabel121);
     }//GEN-LAST:event_jLabel121MouseClicked
 
     private void jLabel122MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel122MouseClicked
         crupier.getJugador().apuestaDobleLinea(ficha, 11,12);
+        ponerFicha(jLabel122);
     }//GEN-LAST:event_jLabel122MouseClicked
 
     private void jLabel125MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel125MouseClicked
         crupier.getJugador().apuestaTrio(ficha, 38, 2, 3);
+        ponerFicha(jLabel125);
     }//GEN-LAST:event_jLabel125MouseClicked
 
     private void jLabel128MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel128MouseClicked
         crupier.getJugador().apuestaTrio(ficha, 37, 1, 2);
+        ponerFicha(jLabel128);
     }//GEN-LAST:event_jLabel128MouseClicked
 
     private void jLabel123MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel123MouseClicked
         crupier.getJugador().apuestaTrio(ficha, 37, 38, 2);
+        ponerFicha(jLabel123);
     }//GEN-LAST:event_jLabel123MouseClicked
 
     private void jLabel129MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel129MouseClicked
         crupier.getJugador().apuestaDuo(ficha, 37, 1);
+        ponerFicha(jLabel129);
     }//GEN-LAST:event_jLabel129MouseClicked
 
     private void jLabel127MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel127MouseClicked
         crupier.getJugador().apuestaDuo(ficha, 37, 2);
+        ponerFicha(jLabel127);
     }//GEN-LAST:event_jLabel127MouseClicked
 
     private void jLabel126MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel126MouseClicked
         crupier.getJugador().apuestaDuo(ficha, 38, 2);
+        ponerFicha(jLabel126);
     }//GEN-LAST:event_jLabel126MouseClicked
 
     private void jLabel124MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel124MouseClicked
         crupier.getJugador().apuestaDuo(ficha, 38, 3);
+        ponerFicha(jLabel124);
     }//GEN-LAST:event_jLabel124MouseClicked
 
     private void jLabel98MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel98MouseClicked
         crupier.getJugador().apuestaDuo(ficha, 37, 38);
+        ponerFicha(jLabel98);
     }//GEN-LAST:event_jLabel98MouseClicked
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        crupier.getApuestas();
+        crupier.ganadores();
+        Numero ganador=crupier.getGanador();
+        String color=ganador.getColor();
+        jLabel171.setForeground(Color.WHITE);
+        if(color.equals("Rojo")){
+            jLabel171.setBackground(Color.RED);
+        }else if(color.equals("Negro")){
+            jLabel171.setBackground(Color.BLACK);
+        }else{
+            jLabel171.setBackground(Color.GREEN);
+            jLabel171.setForeground(Color.BLACK);
+        }
+        jLabel171.setOpaque(true);
+        jLabel171.setText(""+ganador);
+        jLabel170.setText(""+crupier.getJugador().getDinero());
+        //jLabel165.setText(""+ganador);
+    }//GEN-LAST:event_jButton1MouseClicked
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        
+    }//GEN-LAST:event_jButton2ActionPerformed
    
     /**
      * @param args the command line arguments
@@ -2096,6 +2315,7 @@ public class UI extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel100;
@@ -2169,11 +2389,14 @@ public class UI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel162;
     private javax.swing.JLabel jLabel163;
     private javax.swing.JLabel jLabel164;
+    private javax.swing.JLabel jLabel165;
     private javax.swing.JLabel jLabel166;
     private javax.swing.JLabel jLabel167;
     private javax.swing.JLabel jLabel168;
     private javax.swing.JLabel jLabel169;
     private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel170;
+    private javax.swing.JLabel jLabel171;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;

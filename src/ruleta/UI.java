@@ -1920,51 +1920,51 @@ public class UI extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel163MouseClicked
 
     private void jLabel99MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel99MouseClicked
-        
+        crupier.getJugador().apuestaTrio(ficha,1,2,3);
     }//GEN-LAST:event_jLabel99MouseClicked
 
     private void jLabel100MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel100MouseClicked
-        // TODO add your handling code here:
+        crupier.getJugador().apuestaTrio(ficha,4,5,6);
     }//GEN-LAST:event_jLabel100MouseClicked
 
     private void jLabel101MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel101MouseClicked
-        // TODO add your handling code here:
+        crupier.getJugador().apuestaTrio(ficha,7,8,9);
     }//GEN-LAST:event_jLabel101MouseClicked
 
     private void jLabel102MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel102MouseClicked
-        // TODO add your handling code here:
+        crupier.getJugador().apuestaTrio(ficha,10,11,12);
     }//GEN-LAST:event_jLabel102MouseClicked
 
     private void jLabel103MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel103MouseClicked
-        // TODO add your handling code here:
+        crupier.getJugador().apuestaTrio(ficha,13,14,15);
     }//GEN-LAST:event_jLabel103MouseClicked
 
     private void jLabel104MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel104MouseClicked
-        // TODO add your handling code here:
+        crupier.getJugador().apuestaTrio(ficha,16,17,18);
     }//GEN-LAST:event_jLabel104MouseClicked
 
     private void jLabel105MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel105MouseClicked
-        // TODO add your handling code here:
+        crupier.getJugador().apuestaTrio(ficha,19,20,21);
     }//GEN-LAST:event_jLabel105MouseClicked
 
     private void jLabel106MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel106MouseClicked
-        // TODO add your handling code here:
+        crupier.getJugador().apuestaTrio(ficha,22,23,24);
     }//GEN-LAST:event_jLabel106MouseClicked
 
     private void jLabel107MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel107MouseClicked
-        // TODO add your handling code here:
+        crupier.getJugador().apuestaTrio(ficha,25,26,27);
     }//GEN-LAST:event_jLabel107MouseClicked
 
     private void jLabel108MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel108MouseClicked
-        // TODO add your handling code here:
+        crupier.getJugador().apuestaTrio(ficha,28,29,30);
     }//GEN-LAST:event_jLabel108MouseClicked
 
     private void jLabel109MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel109MouseClicked
-        // TODO add your handling code here:
+        crupier.getJugador().apuestaTrio(ficha,31,32,33);
     }//GEN-LAST:event_jLabel109MouseClicked
 
     private void jLabel111MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel111MouseClicked
-        // TODO add your handling code here:
+        crupier.getJugador().apuestaTrio(ficha,34,35,36);
     }//GEN-LAST:event_jLabel111MouseClicked
 
     private void jLabel112MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel112MouseClicked

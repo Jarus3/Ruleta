@@ -3,6 +3,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package ruleta;
+import java.awt.Color;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+
 
 /**
  *
@@ -199,6 +203,8 @@ public class UI extends javax.swing.JFrame {
         jLabel168 = new javax.swing.JLabel();
         jLabel39 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        jLabel164 = new javax.swing.JLabel();
+        jLabel169 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -1367,6 +1373,12 @@ public class UI extends javax.swing.JFrame {
         });
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 330, -1, -1));
 
+        jLabel164.setText("TENGO");
+        jPanel1.add(jLabel164, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 50, -1, -1));
+
+        jLabel169.setText("BALANCE");
+        jPanel1.add(jLabel169, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 50, -1, -1));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -1383,6 +1395,10 @@ public class UI extends javax.swing.JFrame {
 
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
         crupier.getJugador().apuestaNumero(ficha, 1);
+        jLabel1.setOpaque(true);
+        ImageIcon nuevaImagen = new ImageIcon(getClass().getResource("/imagenes/ficha1.png"));
+        jLabel1.setIcon(nuevaImagen);
+        jLabel1.repaint();
     }//GEN-LAST:event_jLabel1MouseClicked
 
     private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
@@ -2152,9 +2168,11 @@ public class UI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel161;
     private javax.swing.JLabel jLabel162;
     private javax.swing.JLabel jLabel163;
+    private javax.swing.JLabel jLabel164;
     private javax.swing.JLabel jLabel166;
     private javax.swing.JLabel jLabel167;
     private javax.swing.JLabel jLabel168;
+    private javax.swing.JLabel jLabel169;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;

@@ -4,8 +4,6 @@
  */
 package ruleta;
 
-import java.util.ArrayList;
-
 /**
  *
  * @author Nicolas Stephan Mamani Costas
@@ -31,8 +29,8 @@ public class Columna extends Apuesta {
         this.columna = columna;
     }
 
-    public Columna(String nombreUsuario, ArrayList<Ficha> fichas, int columna){
-        super(nombreUsuario, fichas);
+    public Columna(String nombreUsuario, Ficha ficha, int columna){
+        super(nombreUsuario, ficha);
         super.multiplicador = 2;
         this.columna = columna;
     }

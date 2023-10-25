@@ -4,7 +4,6 @@
  */
 package ruleta;
 
-import java.util.ArrayList;
 
 /**
  *
@@ -29,8 +28,8 @@ public class Paridad extends Apuesta {
 
     }
 
-    public Paridad(boolean par, String nombreUsuario, ArrayList<Ficha> fichas) {
-        super(nombreUsuario, fichas);
+    public Paridad(boolean par, String nombreUsuario, Ficha ficha) {
+        super(nombreUsuario, ficha);
         this.par = par;
 
     }

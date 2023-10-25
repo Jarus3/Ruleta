@@ -1,24 +1,22 @@
 package ruleta;
 
-import java.util.ArrayList;
-
 public class Apuesta {
     protected String nombreUsuario;
-    protected ArrayList<Ficha> fichas;
+    protected Ficha ficha;
     protected float multiplicador;
     public Apuesta(){
-        fichas=new ArrayList<Ficha>();
+        ficha=new Ficha();
         multiplicador=1;
         nombreUsuario="";
     }
     public Apuesta(String nombreUsuario){
-        fichas=new ArrayList<Ficha>();
+        ficha=new Ficha();
         multiplicador=1;
         this.nombreUsuario=nombreUsuario;
     }
     
-    public Apuesta(String nombreUsuario, ArrayList<Ficha> fichas){
-        this.fichas=fichas;
+    public Apuesta(String nombreUsuario, Ficha fichas){
+        this.ficha=fichas;
         multiplicador=1;
         this.nombreUsuario=nombreUsuario;
     }
@@ -27,8 +25,8 @@ public class Apuesta {
         this.nombreUsuario = nombreUsuario;
     }
 
-    public void setFichas(ArrayList<Ficha> fichas) {
-        this.fichas = fichas;
+    public void setFichas(Ficha fichas) {
+        this.ficha = fichas;
     }
 
     public void setMultiplicador(float multiplicador) {
@@ -39,8 +37,8 @@ public class Apuesta {
         return nombreUsuario;
     }
 
-    public ArrayList<Ficha> getFichas() {
-        return fichas;
+    public Ficha getFichas() {
+        return ficha;
     }
 
     public float getMultiplicador() {

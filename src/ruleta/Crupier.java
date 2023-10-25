@@ -95,10 +95,11 @@ public class Crupier {
     public void ganadores(){
         ganador=mesa.getGanador();
         Apuesta aux;
+        int premio=0;
         for(int i=0;i<apuestas.size();){
             aux=apuestas.get(i);
             if(gano(aux,ganador)){
-                jugador.setFicha(ficha);
+                premio=aux.getMultiplicador();
             }
         }
     }
@@ -188,14 +189,15 @@ public class Crupier {
             Ficha ficha = banca[i].getFicha();
             if(sumaValores<ficha.getValor()){
                 int aux=sumaValores/ficha.getValor();
-                
+                banca[i].addCantidad(aux);
+                sumaValores=sumaValores-(ficha.getValor()*aux);
                 aux=aux*(-1);
                 banca[i].addCantidad(aux);
             }
-            
+            i--;
         }
     
-        if (sumaValores == cantidad) {
+        if (sumaValores == 0) {
             return fichasSeleccionadas;
         } else {
             return null;

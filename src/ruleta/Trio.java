@@ -3,7 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package ruleta;
-import java.util.ArrayList;
 
 /**
  *
@@ -17,7 +16,7 @@ public class Trio extends Apuesta {
         numeros[1]=numero2;
         numeros[2]=numero3;
         super.multiplicador=(float)11;
-        super.fichas=new ArrayList();
+        super.ficha=new Ficha();
         super.nombreUsuario="";
     }
     public Trio(int numero1,int numero2,int numero3, String nombreUsuario){
@@ -26,34 +25,34 @@ public class Trio extends Apuesta {
         numeros[1]=numero2;
         numeros[2]=numero3;
         super.multiplicador=(float)11;
-        super.fichas=new ArrayList();
+        super.ficha=new Ficha();
         super.nombreUsuario=nombreUsuario;
     }
-    public Trio(int numero1,int numero2,int numero3, String nombreUsuario,ArrayList<Ficha> fichas){
+    public Trio(int numero1,int numero2,int numero3, String nombreUsuario,Ficha ficha){
         numeros=new int[3];
         numeros[0]=numero1;
         numeros[1]=numero2;
         numeros[2]=numero3;
         super.multiplicador=(float)11;
-        super.fichas=fichas;
+        super.ficha=ficha;
         super.nombreUsuario=nombreUsuario;
     }
     public Trio(int[] numeros){
         this.numeros=numeros;
         super.multiplicador=(float)11;
-        super.fichas=new ArrayList();
+        super.ficha=new Ficha();
         super.nombreUsuario="";
     }
     public Trio(int[] numeros, String nombreUsuario){
         this.numeros=numeros;
         super.multiplicador=(float)11;
-        super.fichas=new ArrayList();
+        super.ficha=new Ficha();
         super.nombreUsuario=nombreUsuario;
     }
-    public Trio(int[] numeros, String nombreUsuario,ArrayList<Ficha> fichas){
+    public Trio(int[] numeros, String nombreUsuario,Ficha ficha){
         this.numeros=numeros;
         super.multiplicador=(float)11;
-        super.fichas=fichas;
+        super.ficha=ficha;
         super.nombreUsuario=nombreUsuario;
     }
     public int[] getNumeros() {

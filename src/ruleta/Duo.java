@@ -3,7 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package ruleta;
-import java.util.ArrayList;
 
 /**
  *
@@ -16,7 +15,7 @@ public class Duo extends Apuesta {
         numeros[0]=numero1;
         numeros[1]=numero2;
         super.multiplicador=(float)17;
-        super.fichas=new ArrayList();
+        super.ficha=new Ficha();
         super.nombreUsuario="";
     }
     public Duo(int numero1,int numero2, String nombreUsuario){
@@ -24,33 +23,33 @@ public class Duo extends Apuesta {
         numeros[0]=numero1;
         numeros[1]=numero2;
         super.multiplicador=(float)17;
-        super.fichas=new ArrayList();
+        super.ficha=new Ficha();
         super.nombreUsuario=nombreUsuario;
     }
-    public Duo(int numero1,int numero2, String nombreUsuario,ArrayList<Ficha> fichas){
+    public Duo(int numero1,int numero2, String nombreUsuario,Ficha ficha){
         numeros=new int[2];
         numeros[0]=numero1;
         numeros[1]=numero2;
         super.multiplicador=(float)17;
-        super.fichas=fichas;
+        super.ficha=ficha;
         super.nombreUsuario=nombreUsuario;
     }
     public Duo(int[] numeros){
         this.numeros=numeros;
         super.multiplicador=(float)17;
-        super.fichas=new ArrayList();
+        super.ficha=new Ficha();
         super.nombreUsuario="";
     }
     public Duo(int[] numeros, String nombreUsuario){
         this.numeros=numeros;
         super.multiplicador=(float)17;
-        super.fichas=new ArrayList();
+        super.ficha=new Ficha();
         super.nombreUsuario=nombreUsuario;
     }
-    public Duo(int[] numeros, String nombreUsuario,ArrayList<Ficha> fichas){
+    public Duo(int[] numeros, String nombreUsuario,Ficha ficha){
         this.numeros=numeros;
         super.multiplicador=(float)17;
-        super.fichas=fichas;
+        super.ficha=ficha;
         super.nombreUsuario=nombreUsuario;
     }
     public int[] getNumeros() {

@@ -545,6 +545,12 @@ public class UI extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jLabel71, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 310, 20, 30));
+
+        jLabel72.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel72MouseClicked(evt);
+            }
+        });
         jPanel1.add(jLabel72, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 260, 20, 30));
         jPanel1.add(jLabel73, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 200, 20, 40));
         jPanel1.add(jLabel74, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 310, 10, 30));
@@ -1012,6 +1018,10 @@ public class UI extends javax.swing.JFrame {
     private void jLabel71MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel71MouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_jLabel71MouseClicked
+
+    private void jLabel72MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel72MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel72MouseClicked
    
     /**
      * @param args the command line arguments

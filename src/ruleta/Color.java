@@ -14,12 +14,12 @@ public class Color extends Apuesta {
 
     public Color() {
         super();
-        color = "black";
+        color = "Negro";
     }
 
     public Color(String nombreUsuario) {
         super(nombreUsuario);
-        color = "black";
+        color = "Negro";
     }
 
     public Color(String color, String nombreUsuario) {

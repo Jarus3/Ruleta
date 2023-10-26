@@ -8,7 +8,7 @@ package ruleta;
  *
  * @author Jaruslav Markowski
  */
-public class DobleLinea extends Apuesta {
+public class DobleLinea extends Apuesta implements Interfaz_Apuestas{
     private int[] lineas;
     public DobleLinea(int linea1,int linea2){
         lineas=new int[2];

@@ -46,7 +46,7 @@ public class Usuario {
         this.dinero=dinero;
     }
     
-    public void addFicha(Ficha ficha){
+    public void addDinero(Ficha ficha){
         dinero+=ficha.getValor();
     }
 

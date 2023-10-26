@@ -9,7 +9,7 @@ package ruleta;
  *
  * @author Nicolas Stephan Mamani Costas
  */
-public class Docena extends Apuesta {
+public class Docena extends Apuesta implements Interfaz_Apuestas{
     private int docena;
 
     public Docena() {

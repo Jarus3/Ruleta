@@ -9,7 +9,7 @@ package ruleta;
  *
  * @author Jaruslav Markowski
  */
-public class ApuestaNumero extends Apuesta {
+public class ApuestaNumero extends Apuesta implements Interfaz_Apuestas{
     private int valor;
     public ApuestaNumero(int valor){
         this.valor=valor;

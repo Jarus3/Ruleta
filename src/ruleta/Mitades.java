@@ -9,7 +9,7 @@ package ruleta;
  *
  * @author Nicolas Stephan Mamani Costas
  */
-public class Mitades extends Apuesta {
+public class Mitades extends Apuesta implements Interfaz_Apuestas{
     private boolean superior;
 
     public Mitades() {

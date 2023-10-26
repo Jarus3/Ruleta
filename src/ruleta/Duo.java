@@ -8,7 +8,7 @@ package ruleta;
  *
  * @author Jaruslav Markowski
  */
-public class Duo extends Apuesta {
+public class Duo extends Apuesta implements Interfaz_Apuestas{
     private int[] numeros;
     public Duo(int numero1,int numero2){
         numeros=new int[2];

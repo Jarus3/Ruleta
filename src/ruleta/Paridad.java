@@ -9,7 +9,7 @@ package ruleta;
  *
  * @author Nicolas Stephan Mamani Costas
  */
-public class Paridad extends Apuesta {
+public class Paridad extends Apuesta implements Interfaz_Apuestas{
     private boolean par;
 
     public Paridad() {

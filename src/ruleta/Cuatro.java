@@ -9,7 +9,7 @@ import java.util.ArrayList;
  *
  * @author Jaruslav Markowski
  */
-public class Cuatro extends Apuesta {
+public class Cuatro extends Apuesta implements Interfaz_Apuestas{
     private int[] numeros;
     public Cuatro(int numero1,int numero2,int numero3,int numero4){
         numeros=new int[4];

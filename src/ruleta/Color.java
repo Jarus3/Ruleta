@@ -9,7 +9,7 @@ package ruleta;
  *
  * @author Nicolas Stephan Mamani Costas
  */
-public class Color extends Apuesta {
+public class Color extends Apuesta implements Interfaz_Apuestas{
     private String color;
 
     public Color() {

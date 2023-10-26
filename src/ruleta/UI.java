@@ -9,7 +9,10 @@ import javax.swing.JLabel;
 import java.awt.Image;
 /**
  *
- * @author Nicolas
+ * @author 
+ * Jaruslav Markowski
+ * Nicolas Stephan Mamani Costas
+ * 
  */
 public class UI extends javax.swing.JFrame {
 
@@ -1674,7 +1677,7 @@ public class UI extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel135MouseClicked
 
     private void jLabel136MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel136MouseClicked
-        crupier.getJugador().apuestaMitades(ficha, true);
+        crupier.getJugador().apuestaMitades(ficha, false);
         ponerFicha(jLabel136);
     }//GEN-LAST:event_jLabel136MouseClicked
 
@@ -1684,12 +1687,12 @@ public class UI extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel137MouseClicked
 
     private void jLabel138MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel138MouseClicked
-        crupier.getJugador().apuestaColor(ficha, "red");
+        crupier.getJugador().apuestaColor(ficha, "Rojo");
         ponerFicha(jLabel138);
     }//GEN-LAST:event_jLabel138MouseClicked
 
     private void jLabel139MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel139MouseClicked
-        crupier.getJugador().apuestaColor(ficha, "black");
+        crupier.getJugador().apuestaColor(ficha, "Negro");
         ponerFicha(jLabel139);
     }//GEN-LAST:event_jLabel139MouseClicked
 
@@ -1699,7 +1702,7 @@ public class UI extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel140MouseClicked
 
     private void jLabel141MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel141MouseClicked
-        crupier.getJugador().apuestaMitades(ficha, false);
+        crupier.getJugador().apuestaMitades(ficha, true);
         ponerFicha(jLabel141);
     }//GEN-LAST:event_jLabel141MouseClicked
 

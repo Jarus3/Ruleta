@@ -37,11 +37,11 @@ public class Numero {
             columna=0;
         }else{
             if(valor%3==0){
-                fila=3;
+                columna=3;
             }else{
-                fila=valor%3;
+                columna=valor%3;
             }
-            columna=(valor+2)/3;
+            fila=(valor+2)/3;
             docena=(valor+11)/12;
             if (valor >= 1 && valor <= 10 || valor >= 19 && valor <= 28) {
                 if (valor % 2 == 0) {

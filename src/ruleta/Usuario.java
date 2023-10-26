@@ -90,7 +90,7 @@ public class Usuario {
         dinero-=ficha.getValor();
     }
     public void apuestaColumna(Ficha ficha, int columna){
-        Apuesta apuesta = new Columna( nombre, ficha,columna);
+        Apuesta apuesta = new Columna( nombre, ficha, columna);
         apuestas.add(apuesta);
         dinero-=ficha.getValor();
     }

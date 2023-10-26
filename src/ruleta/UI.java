@@ -7,7 +7,6 @@ import java.awt.Color;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import java.awt.Image;
-import java.awt.Dimension;
 /**
  *
  * @author Nicolas
@@ -29,29 +28,21 @@ public class UI extends javax.swing.JFrame {
         jLabel170.setText(""+crupier.getJugador().getDinero());
     }
 
-//    private void ponerFicha(JLabel etiqueta){
-//        etiqueta.setOpaque(true);
-//        ImageIcon nuevaImagen = new ImageIcon(getClass().getResource("/imagenes/ficha1.png"));
-//        etiqueta.setIcon(nuevaImagen);
-//        etiqueta.repaint();
-//        jLabel170.setText(""+crupier.getJugador().getDinero());
-//    }
     private void ponerFicha(JLabel etiqueta) {
-        etiqueta.setOpaque(false); // Configura la opacidad a false para que no se muestre el fondo
-        ImageIcon nuevaImagen = new ImageIcon(getClass().getResource("/imagenes/ficha.png"));
-
-        // Obtiene la imagen original
+        String imagenPath = "/imagenes/1.png";
+        if(ficha.getValor()==5){
+            imagenPath = "/imagenes/5.png";
+        }
+        if(ficha.getValor()==25){
+            imagenPath = "/imagenes/25.png";
+        }
+        etiqueta.setOpaque(false);
+        ImageIcon nuevaImagen = new ImageIcon(getClass().getResource(imagenPath)); 
         Image imagenOriginal = nuevaImagen.getImage();
-
-        // Reescala la imagen a 20x20 px
         Image imagenEscalada = imagenOriginal.getScaledInstance(20, 20, Image.SCALE_SMOOTH);
-
-        // Crea un nuevo ImageIcon con la imagen escalada
         ImageIcon imagenEscaladaIcon = new ImageIcon(imagenEscalada);
-
         etiqueta.setIcon(imagenEscaladaIcon);
-        
-        etiqueta.revalidate(); // Vuelve a validar la etiqueta para que el cambio de tamaño surta efecto
+        etiqueta.revalidate();
         
         jLabel170.setText("" + crupier.getJugador().getDinero());
     }

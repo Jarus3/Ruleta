@@ -8,6 +8,8 @@ package ruleta;
  * Write a description of interface Interfaz_Apuesta here.
  * 
  * @author 
+ * Jaruslav Markowski
+ * Nicolas Stephan Mamani Costas
  */
 
 public interface Interfaz_Apuestas

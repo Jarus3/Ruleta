@@ -6,7 +6,8 @@ package ruleta;
 
 /**
  *
- * @author Nicolas Stepha Mamani Costas y Jaruslav Markowski
+ * @author Nicolas Stepha Mamani Costas 
+ * Jaruslav Markowski
  */
 import java.util.ArrayList;
 

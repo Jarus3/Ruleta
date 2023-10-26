@@ -8,6 +8,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import java.awt.Image;
 import java.util.ArrayList;
+import javax.sound.sampled.*;
 /**
  *
  * @author 
@@ -67,6 +68,19 @@ public class UI extends javax.swing.JFrame {
             jLabel165.setBackground(Color.GREEN);
         }else{
             jLabel165.setBackground(Color.YELLOW);
+        }
+        sonar("/sonidos/fichas.wav");
+    }
+    
+    private void sonar(String direccion){
+        try{
+            AudioInputStream audioIn = AudioSystem.getAudioInputStream(getClass().getResource(direccion));
+            Clip clip = AudioSystem.getClip();
+            clip.open(audioIn);
+            clip.setFramePosition(0); // Reiniciar el sonido al principio
+            clip.start();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
     /**
@@ -2289,6 +2303,7 @@ public class UI extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel98MouseClicked
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        sonar("/sonidos/ruleta.wav");
         crupier.getApuestas();
         crupier.ganadores();
         Numero ganador=crupier.getGanador();

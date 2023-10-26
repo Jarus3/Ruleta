@@ -7,6 +7,11 @@ import java.awt.Color;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import java.awt.Image;
+import javax.sound.sampled.*;
+import java.io.File;
+import javax.swing.*;
+import java.util.Timer;
+import java.util.TimerTask;
 /**
  *
  * @author 
@@ -48,6 +53,16 @@ public class UI extends javax.swing.JFrame {
         etiqueta.revalidate();
         
         jLabel170.setText("" + crupier.getJugador().getDinero());
+        
+        try{
+            AudioInputStream audioIn = AudioSystem.getAudioInputStream(getClass().getResource("/sonidos/fichas.wav"));
+            Clip clip = AudioSystem.getClip();
+            clip.open(audioIn);
+            clip.setFramePosition(0);
+            clip.start();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -2276,6 +2291,15 @@ public class UI extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel98MouseClicked
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        try{
+            AudioInputStream audioIn = AudioSystem.getAudioInputStream(getClass().getResource("/sonidos/ruleta.wav"));
+            Clip clip = AudioSystem.getClip();
+            clip.open(audioIn);
+            clip.setFramePosition(0); // Reiniciar el sonido al principio
+            clip.start();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         crupier.getApuestas();
         crupier.ganadores();
         Numero ganador=crupier.getGanador();

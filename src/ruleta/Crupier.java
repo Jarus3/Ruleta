@@ -120,17 +120,23 @@ public class Crupier {
             if(aux2.getColor().equals(ganador.getColor())){aux=true;}
         }else if(apuesta instanceof Mitades){
             Mitades aux2=(Mitades)apuesta;
-            if(aux2.getSuperior()){
-                if(ganador.getValor()>18){aux=true;}
+            if(ganador.getValor()==0||ganador.getValor()==37){
             }else{
-                if(ganador.getValor()<19){aux=true;}
+                if(aux2.getSuperior()){
+                    if(ganador.getValor()>18){aux=true;}
+                }else{
+                    if(ganador.getValor()<19){aux=true;}
+                }
             }
         }else if(apuesta instanceof Paridad){
             Paridad aux2=(Paridad)apuesta;
-            if(aux2.getPar()){
-                if((ganador.getValor()%2)==0){aux=true;}
+            if(ganador.getValor()==0||ganador.getValor()==37){
             }else{
-                if((ganador.getValor()%2)==1){aux=true;}
+                if(aux2.getPar()){
+                    if((ganador.getValor()%2)==0){aux=true;}
+                }else{
+                    if((ganador.getValor()%2)==1){aux=true;}
+                }
             }
         }else if(apuesta instanceof Columna){
             Columna aux2=(Columna)apuesta;

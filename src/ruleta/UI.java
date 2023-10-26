@@ -7,6 +7,7 @@ import java.awt.Color;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import java.awt.Image;
+import java.util.ArrayList;
 /**
  *
  * @author 
@@ -21,14 +22,23 @@ public class UI extends javax.swing.JFrame {
      */
     private Crupier crupier;
     private Ficha ficha; 
+    private int balance;
+    private int previo;
+    private ArrayList<JLabel> usadas;
      
     public UI() {
         initComponents();
         ficha = new Ficha(1,"amarillo");
         crupier = new Crupier();
+        usadas=new ArrayList();
         jLabel170.setBackground(Color.CYAN);
         jLabel170.setOpaque(true);
         jLabel170.setText(""+crupier.getJugador().getDinero());
+        balance=0;
+        previo=crupier.getJugador().getDinero();
+        jLabel165.setText(""+balance);
+        jLabel165.setBackground(Color.YELLOW);
+        jLabel165.setOpaque(true);
     }
 
     private void ponerFicha(JLabel etiqueta) {
@@ -46,8 +56,18 @@ public class UI extends javax.swing.JFrame {
         ImageIcon imagenEscaladaIcon = new ImageIcon(imagenEscalada);
         etiqueta.setIcon(imagenEscaladaIcon);
         etiqueta.revalidate();
+        usadas.add(etiqueta);
         
         jLabel170.setText("" + crupier.getJugador().getDinero());
+        balance-=ficha.getValor();
+        jLabel165.setText(""+balance);
+        if(balance<0){
+            jLabel165.setBackground(Color.RED);
+        }else if(balance>0){
+            jLabel165.setBackground(Color.GREEN);
+        }else{
+            jLabel165.setBackground(Color.YELLOW);
+        }
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -232,7 +252,6 @@ public class UI extends javax.swing.JFrame {
         jLabel165 = new javax.swing.JLabel();
         jLabel170 = new javax.swing.JLabel();
         jLabel171 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -1421,6 +1440,8 @@ public class UI extends javax.swing.JFrame {
         jLabel169.setForeground(new java.awt.Color(255, 255, 255));
         jLabel169.setText("BALANCE");
         jPanel1.add(jLabel169, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 50, -1, -1));
+
+        jLabel165.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jPanel1.add(jLabel165, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 70, 70, 30));
         jLabel165.getAccessibleContext().setAccessibleName("balance");
 
@@ -1433,14 +1454,6 @@ public class UI extends javax.swing.JFrame {
         jPanel1.add(jLabel171, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 110, 80, 40));
         jLabel171.getAccessibleContext().setAccessibleName("mostrar");
         jLabel171.getAccessibleContext().setAccessibleDescription("");
-
-        jButton2.setText("Volver a Apostar");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 400, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -2292,12 +2305,20 @@ public class UI extends javax.swing.JFrame {
         jLabel171.setOpaque(true);
         jLabel171.setText(""+ganador);
         jLabel170.setText(""+crupier.getJugador().getDinero());
-        //jLabel165.setText(""+ganador);
-    }//GEN-LAST:event_jButton1MouseClicked
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        balance=crupier.getJugador().getDinero()-previo;
+        jLabel165.setText(""+balance);
+        if(balance<0){
+            jLabel165.setBackground(Color.RED);
+        }else if(balance>0){
+            jLabel165.setBackground(Color.GREEN);
+        }else{
+            jLabel165.setBackground(Color.YELLOW);
+        }
         
-    }//GEN-LAST:event_jButton2ActionPerformed
+        for(int i=0;i<usadas.size();i++){
+            usadas.get(i).setIcon(null);
+        }
+    }//GEN-LAST:event_jButton1MouseClicked
 
     private void jLabel172MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel172MouseClicked
         crupier.getJugador().apuestaDuo(ficha, 22, 23);
@@ -2341,7 +2362,6 @@ public class UI extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel100;

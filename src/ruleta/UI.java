@@ -1360,32 +1360,32 @@ public class UI extends javax.swing.JFrame {
         });
         jPanel1.add(jLabel163, new org.netbeans.lib.awtextra.AbsoluteConstraints(733, 235, 20, 20));
 
-        jLabel166.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fichas1.jpg"))); // NOI18N
+        jLabel166.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fichas1.png"))); // NOI18N
         jLabel166.setText("1");
         jLabel166.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel166MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel166, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 70, 80, -1));
+        jPanel1.add(jLabel166, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 10, 80, -1));
 
-        jLabel167.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fichas5a.jpg"))); // NOI18N
+        jLabel167.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fichas5.png"))); // NOI18N
         jLabel167.setText("5");
         jLabel167.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel167MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel167, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 70, 90, 90));
+        jPanel1.add(jLabel167, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 10, 90, 90));
 
-        jLabel168.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fichas25.jpg"))); // NOI18N
+        jLabel168.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fichas25.png"))); // NOI18N
         jLabel168.setText("25");
         jLabel168.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel168MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel168, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 70, 90, 90));
+        jPanel1.add(jLabel168, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 10, 90, 90));
 
         jLabel172.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {

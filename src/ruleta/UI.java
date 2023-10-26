@@ -8,10 +8,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import java.awt.Image;
 import javax.sound.sampled.*;
-import java.io.File;
-import javax.swing.*;
-import java.util.Timer;
-import java.util.TimerTask;
+
 /**
  *
  * @author 
